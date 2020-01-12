@@ -6,7 +6,7 @@ block content
       background-color: #000;
     };
 
-  #ui.container.u-center.u-flex-col
+  #ui.container.u-center.u-flex-col(style="padding-top: 132px; padding-bottom: 132px;")
       h1 Header 1
       h2 Header 2
       h3 Header 3
@@ -79,3 +79,15 @@ block content
       div(style="width: 375px;")
         +input(type="text" placeholder="Input")
         +input(true)(placeholder="Textarea")
+
+      -
+        var tour = {
+          img: 'zinger',
+          title: 'Обзорная экскурсия по Петербургу',
+          people: '1-20 человек',
+          time: '2.5 часa',
+          location: 'Невский проспект',
+          price: 400
+        }
+
+      +tour-li(tour)(style="width: 310px;")

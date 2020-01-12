@@ -1,0 +1,21 @@
+mixin tour-li(data)
+  .tour-li&attributes(attributes)
+    .tour-li__img.img
+      a(href="#"): img.img__i(src=`assets/img/tours/${data.img}.jpg`)
+      +btn('Выбрать тур', true)
+
+    a(href="#").t-h6.tour-li__title= data.title
+    ul.tour-li__list
+      li
+        +svg('people')
+        p= data.people
+      li
+        +svg('clock')
+        p= data.time
+      li
+        +svg('pin')
+        p= data.location
+    b.tour-li__price= `от ${data.price}₽`
+  
+
+

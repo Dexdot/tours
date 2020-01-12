@@ -1,0 +1,53 @@
+.tour-li
+  width: 100%
+
+.tour-li__img
+  border-radius: 12px
+
+  overflow: hidden
+  margin-bottom: 24px
+  padding-bottom: 155%
+
+  .btn
+    position: absolute
+    bottom: 16px
+    right: 16px
+
+    @media (max-width: $mob)
+      bottom: 12px
+      right: 12px
+
+.tour-li__title
+  display: block
+  margin-bottom: 16px
+
+.tour-li__list
+  margin-bottom: 24px
+
+  opacity: 0.4
+  line-height: 1.2
+
+  @media (max-width: $mob)
+    margin-bottom: 16px
+    font-size: 12px
+
+  li
+    display: flex
+    align-items: flex-start
+
+  li:not(:last-child)
+    margin-bottom: 8px
+
+  svg
+    margin-right: 12px
+    min-width: 16px
+    width: 16px
+    height: 16px
+
+    @media (max-width: $mob)
+      margin-right: 8px
+
+.tour-li__price
+  +mont(b)
+  line-height: 1
+  font-size: 16px
