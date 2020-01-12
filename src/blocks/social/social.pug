@@ -1,0 +1,9 @@
+- var socials = ['tripadvisor', 'inst', 'vk', 'fb', 'telegram'];
+
+mixin social
+  ul.social&attributes(attributes)
+    each name in socials
+      li
+        a.u-center(href="#" target="_blank"): +svg(name)
+    if block
+      block
