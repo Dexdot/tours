@@ -1,15 +1,30 @@
 \:root
-  --header-h: 112px
+  --header-h: 126px
   @media (max-width: $tab)
     --header-h: 104px
   
 .header
   z-index: 3
-  position: absolute
   top: 0
   left: 0
-
   width: 100%
+
+  transition: $trs
+
+  @media (max-width: $tab)
+    position: absolute
+
+  @media (min-width: $tab + 1)
+    position: fixed
+    background: $beige-l
+
+.header--fixed
+  @media (min-width: $tab + 1)
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16)
+
+.menu-active .header
+  box-shadow: unset
+  background: 0
   
 .header__inner
   display: flex
@@ -22,8 +37,9 @@
 
 
 // Logo
-.header__logo
-  height: 72px
+.header__logo-wrap
+  // position: relative
+
   margin-right: 80px
   @media (max-width: 1540px)
     margin-right: 40px
@@ -31,8 +47,29 @@
   @media (max-width: 1110px)
     margin-right: 16px
 
+.header__logo
+  height: 72px
+
+.header:not(.header--fixed)
+  .header__logo-wrap .select-text
+    opacity: 0
+    pointer-events: none
+
+.header__logo-wrap .select-text
+  line-height: 1
+  transition: $trs
+
+  select
+    font-size: 10px
+    padding-right: 10px
+
+  .i-chevron
+    width: 8px
+    height: 8px
+
 
 // Hide on tab/mob
+.header__logo-wrap .select-text,
 .header__contact,
 .header .btn,
 .header__nav

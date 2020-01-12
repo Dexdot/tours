@@ -1,7 +1,13 @@
 header.header
   .container
     .header__inner
-      a.header__logo(href="./index.html"): +svg('logo')
+      .header__logo-wrap
+        a.header__logo.u-center(href="./index.html"): +svg('logo')
+        .select-text
+          +svg('chevron')
+          select
+            option(value="spb" selected) Санкт-Петербург
+            option(value="tallin") Таллин
       nav.header__nav
         ul
           each link in ['Экскурсии', 'Отзывы', 'Блог', 'Вопросы и ответы', 'Контакты']
