@@ -1,0 +1,118 @@
+$btn-h: var(--btn-h)
+.btn
+  --btn-h: 56px
+
+.btn
+  padding: 0 24px
+  height: $btn-h
+  line-height: $btn-h
+  text-align: center
+
+  position: relative
+
+.btn__bg
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+  width: 100%
+  height: 100%
+
+  border-radius: $btn-h
+  background: $acc
+
+.btn__text,
+.btn__plus
+  display: inline-block
+  vertical-align: middle
+
+  position: relative
+  z-index: 1
+
+.btn__text
+  +mont(sb)
+  line-height: $btn-h
+  font-size: 12px
+  letter-spacing: 0.04em
+  text-transform: uppercase
+  +link(#fff)
+
+.btn svg
+  color: #fff
+
+
+// Pulse
+.btn--pulse::before
+  content: ''
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%) scale(1)
+
+  width: 100%
+  height: 100%
+
+  border-radius: $btn-h
+  border: 1px solid $acc
+  animation: btn-pulse 1.25s infinite ease-in-out
+
+@keyframes btn-pulse
+  to
+    opacity: 0
+    transform: translate(-50%,-50%) scale(1.1)
+
+
+// Light
+.btn--light
+  .btn__text
+    +link($black)
+  .btn__bg
+    background: #E7E2DB
+  &::before
+    border: 1px solid #E7E2DB
+
+
+// Dark
+.btn--dark
+  .btn__bg
+    background: #333
+  &::before
+    border: 1px solid #333
+
+
+// Expand
+.btn--expand
+  --btn-h: 40px
+  border-radius: 40px
+  overflow: hidden
+
+  padding-left: 16px
+  padding-right: 12px
+
+  .btn__bg,
+  .btn__text,
+  .btn__plus
+    transition: $trs-4
+  
+  .btn__bg
+    left: unset
+    right: 0
+    transform: translate(calc(100% - 40px), -50%)
+
+  .btn__text
+    margin-right: 8px
+    opacity: 0
+    pointer-events: none
+
+.btn--expand:hover
+  .btn__plus
+    transform: rotate(-90deg)
+
+  .btn__bg
+    transform: translate(0, -50%)
+
+  .btn__text
+    opacity: 1
+    pointer-events: auto
+  
