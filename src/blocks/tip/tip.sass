@@ -1,0 +1,87 @@
+// Tip
+.tip
+  width: 16px
+  height: 16px
+  position: relative
+
+  @media (max-width: $mob)
+    position: static
+
+// Button
+.tip__btn
+  min-width: 16px
+  width: 16px
+  height: 16px
+
+  border-radius: 50%
+  background: $acc
+
+  .i-help
+    color: #fff
+
+.tip__btn:focus,
+.tip__btn:hover
+  & + .tip__content
+    opacity: 1
+    transform: translate(16px, 0)
+
+    @media (max-width: $mob)
+      transform: translate(0, 0)
+
+
+// Content
+.tip__content
+  z-index: 1
+  position: absolute
+  top: -16px
+  left: 100%
+
+  transform: translate(16px, 0)
+
+  width: 302px
+  padding: 24px
+
+  line-height: 1.4
+  background: #DBD1C6
+  opacity: 0
+  pointer-events: none
+  transition: opacity 0.25s
+
+  @media (max-width: $mob)
+    width: auto
+    transform: translate(0, 0)
+    top: calc(var(--tip-btn-offset-top) + 24px)
+    left: 0
+
+
+.tip__content p, a
+  &:not(:last-child)
+    margin-bottom: 8px
+
+.tip__content a
+  +link($acc)
+
+
+// Content triangle
+.tip__content::before
+  content: ''
+  position: absolute
+  top: 16px
+  right: 100%
+  transform: translate(0, 0)
+
+  width: 0
+  height: 0
+
+  border-style: solid
+  border-width: 8px 13.9px 8px 0
+  border-color: transparent #DBD1C6 transparent transparent
+
+  @media (max-width: $mob)
+    top: unset
+    bottom: 100%
+    left: var(--tip-btn-offset-left)
+    transform: translate(-100%, 0)
+
+    border-width: 0 8px 13.9px 8px
+    border-color: transparent transparent #DBD1C6 transparent

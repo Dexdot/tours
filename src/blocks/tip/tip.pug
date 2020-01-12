@@ -1,0 +1,7 @@
+mixin tip
+  .tip.u-center&attributes(attributes)
+    button.tip__btn.u-center: +svg('help')
+    
+    span.tip__content
+      if block
+        block

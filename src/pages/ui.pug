@@ -6,7 +6,7 @@ block content
       background-color: #000;
     };
 
-  .container.u-center.u-flex-col
+  #ui.container.u-center.u-flex-col
       h1 Header 1
       h2 Header 2
       h3 Header 3
@@ -46,6 +46,11 @@ block content
         +slider-nav
 
       br
+      +tip
+        p На самом деле, можно и больше. Просто напишите нам на почту и мы предложим классный тур для большой компании
+        a(href="mailto:peshehodtour@yandex.ru") peshehodtour@yandex.ru 
+
+      br
       .select-box
         +svg('chevron')
         select
@@ -69,3 +74,8 @@ block content
       .black-box
         +chipbox('Санкт-Петербург').chipbox--white
         +chipbox('Санкт-Петербург').chipbox--white.active
+
+      br
+      div(style="width: 375px;")
+        +input(type="text" placeholder="Input")
+        +input(true)(placeholder="Textarea")
