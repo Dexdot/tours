@@ -1,5 +1,21 @@
 header.header
   .container
-    +svg('logo')
-    | Header
+    .header__inner
+      a.header__logo(href="./index.html"): +svg('logo')
+      nav.header__nav
+        ul
+          each link in ['Экскурсии', 'Отзывы', 'Блог', 'Вопросы и ответы', 'Контакты']
+            li: a.t-ttu(href="#")= link
+      
+      .header__phone
+        a(href="tel:+278125653541") +7 (812) 565-35-41
+        button Заказать звонок
+
+      .header__social
+        +social
+      +btn('Купить билет').btn--pulse
+      +burger
+      
+
+      
 

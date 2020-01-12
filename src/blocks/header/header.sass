@@ -1,4 +1,87 @@
-.header
-  height: 80px
-  background: grey
-  color: #fff
+.header__inner
+  display: flex
+  align-items: center
+  padding-top: 24px
+  padding-bottom: 16px
+  @media (max-width: $tab)
+    align-items: flex-start
+
+
+// Logo
+.header__logo
+  margin-right: 80px
+  @media (max-width: 1540px)
+    margin-right: 40px
+    
+  @media (max-width: 1110px)
+    margin-right: 16px
+
+
+// Hide on tab/mob
+.header__phone,
+.header .btn,
+.header__nav
+  @media (max-width: $tab)
+    display: none
+
+
+// Nav
+.header__nav ul
+  display: flex
+  align-items: center
+  margin-left: -32px
+  @media (max-width: 1540px)
+    margin-left: -16px
+
+.header__nav li
+  margin-left: 32px
+  @media (max-width: 1540px)
+    margin-left: 16px
+
+
+// Phone
+.header__phone
+  margin-left: auto
+  margin-right: 24px
+
+  @media (max-width: 1540px)
+    margin-right: 16px
+
+  a
+    +mont(sb)
+    font-size: 16px
+    letter-spacing: 0.04em
+    line-height: 1
+    display: block
+    @media (max-width: 1540px)
+      font-size: 14px
+
+  button
+    font-size: 12px
+    opacity: 0.6
+    transition: $trs
+    &:hover
+      opacity: 1
+
+
+// Social
+.header__social
+  margin-right: 64px
+
+  @media (max-width: 1540px)
+    margin-right: 32px
+
+  @media (max-width: 1340px)
+    display: none
+
+
+// Burger
+.header .burger
+  margin-top: 1px
+  margin-left: auto
+
+  @media (min-width: $tab + 1)
+    display: none
+
+  
+
