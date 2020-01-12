@@ -1,0 +1,4 @@
+mixin slider-nav(prevClass = '', nextClass = '')
+  .slider-nav&attributes(attributes)
+    button.slider-nav__btn.slider-nav__btn--prev.u-center(class=prevClass): +svg('polygon')
+    button.slider-nav__btn.slider-nav__btn--next.u-center(class=nextClass): +svg('polygon')

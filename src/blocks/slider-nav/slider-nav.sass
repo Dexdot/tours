@@ -1,0 +1,34 @@
+.slider-nav
+  display: flex
+  align-items: center
+  height: 80px
+  padding: 16px 0
+
+  width: 100%
+
+  border-top: 1px solid rgba($black, 0.1)
+
+.slider-nav__btn
+  width: 50%
+  height: 48px
+  color: $black
+
+  position: relative
+
+.slider-nav__btn .i-polygon
+  width: 12px
+  height: 12px
+
+.slider-nav__btn--prev .i-polygon
+  transform: scale(-1, 1)
+
+.slider-nav__btn--prev::before
+  content: ''
+  position: absolute
+  top: 0
+  right: 0
+
+  width: 1px
+  height: 100%
+
+  background: rgba($black, 0.1)
