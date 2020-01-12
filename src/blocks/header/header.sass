@@ -1,14 +1,29 @@
+\:root
+  --header-h: 112px
+  @media (max-width: $tab)
+    --header-h: 104px
+  
+.header
+  z-index: 3
+  position: absolute
+  top: 0
+  left: 0
+
+  width: 100%
+  
 .header__inner
   display: flex
   align-items: center
   padding-top: 24px
   padding-bottom: 16px
   @media (max-width: $tab)
+    padding-top: 16px
     align-items: flex-start
 
 
 // Logo
 .header__logo
+  height: 72px
   margin-right: 80px
   @media (max-width: 1540px)
     margin-right: 40px

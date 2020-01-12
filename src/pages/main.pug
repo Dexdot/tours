@@ -1,0 +1,13 @@
+extends ../templates/template.pug
+block content
+  section.hero
+    .hero__bg.img
+      img.img__i(src="assets/img/hero.jpg")
+    
+    .hero__text
+      .container
+        .hero__chipbox-list
+          +chipbox('Санкт-Петербург').chipbox--white.active
+          +chipbox('Таллин').chipbox--white
+        h1.t-h1 Пешеходные туры по Санкт-Петербургу
+        p Не просто рассказываем заученные тексты, а делимся знаниями и любовью к родному городу

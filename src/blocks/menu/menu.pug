@@ -1,0 +1,16 @@
+section.menu
+  .menu__container.container
+    nav.menu__nav
+      ul
+        each link in ['Экскурсии', 'Отзывы', 'Блог', 'Вопросы', 'Контакты']
+          li: a.t-h2(href="#")= link
+    
+    .menu__social
+      +social
+
+    .menu__info
+      .menu__contact
+        a(href="tel:+278125653541") +7 (812) 565-35-41
+        button Заказать звонок
+
+      +btn('Выбрать тур')
