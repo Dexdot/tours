@@ -1,4 +1,168 @@
 .footer
-  height: 80px
-  background: grey
+  background: $black
   color: #fff
+
+.footer a
+  +link(#fff)
+
+
+// Inner
+.footer__inner
+  display: flex
+  align-items: flex-start
+
+  padding-top: 120px
+  padding-bottom: 48px
+
+  @media (max-width: $tab)
+    padding-top: 64px
+    flex-direction: column
+
+
+// Logo
+.footer__logo
+  @media (max-width: $tab)
+    margin-bottom: 48px
+
+.footer__logo .i-logo
+  color: #fff
+  @media (min-width: $tab + 1)
+    width: 137px
+    height: 80px
+
+
+// Nav
+.footer__nav
+  @media (max-width: $tab)
+    margin-bottom: 48px
+
+  @media (min-width: $tab + 1)
+    margin-left: 40px
+
+  @media (min-width: 1111px)
+    margin-left: calc(#{mix(2)} - 137px)
+
+
+.footer__nav li:not(:last-child)
+  margin-bottom: 8px
+
+.footer__info
+  @media (min-width: $tab + 1)
+    margin-left: auto
+
+.footer__info .btn
+  @media (max-width: $tab)
+    display: none
+
+
+// Contact
+.footer__contact
+  @media (min-width: $tab + 1)
+    text-align: right
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+
+    margin-top: 152px
+
+.footer__contact a:first-child
+  font-size: 16px
+  letter-spacing: 0.04em
+
+.footer__contact a:last-child,
+.footer__contact button
+  font-size: 12px
+
+.footer__contact button
+  display: block
+  margin-bottom: 8px
+
+  +mont(r)
+  opacity: 0.4
+  transition: $trs
+  &:hover
+    opacity: 1
+
+
+// Bottom bar
+.footer__bottom
+  display: flex
+
+  @media (min-width: $tab + 1)
+    padding: 48px 0
+    border-top: 1px solid rgba(#fff, 0.1)
+    align-items: center
+
+  @media (max-width: $tab)
+    flex-direction: column-reverse
+
+
+// Copyright bar
+.footer__copyright
+  +mont(r)
+
+  display: flex
+  align-items: center
+  margin-left: -24px
+
+  @media (max-width: $tab)
+    margin-left: -16px
+    padding: 24px 0
+    border-top: 1px solid rgba(#fff, 0.1)
+
+  @media (max-width: 360px)
+    font-size: 12px
+    margin-left: -8px
+
+  p, a
+    opacity: 0.4
+    margin-left: 24px
+    @media (max-width: $tab)
+      margin-left: 16px
+    
+    @media (max-width: 360px)
+      margin-left: 8px
+
+  p span
+    @media (max-width: $tab)
+      display: none
+
+  a
+    transition: $trs
+    &:hover
+      opacity: 1
+
+
+// Social
+.footer__social
+  @media (max-width: $tab)
+    margin-bottom: 32px
+    
+  @media (min-width: $tab + 1)
+    margin-left: auto
+
+  .social
+    @media (min-width: $tab + 1)
+      margin-left: -24px
+  
+  .social li
+    @media (min-width: $tab + 1)
+      margin-left: 24px
+      display: flex
+      align-items: center
+      justify-content: center
+
+  .social a
+    @media (max-width: $tab)
+      width: 40px
+      height: 40px
+      border: 1px solid #fff
+
+    @media (min-width: $tab + 1)
+      border: 0
+      width: auto
+      height: auto
+    
+  svg
+    color: #fff
+

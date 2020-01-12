@@ -1,2 +1,30 @@
 footer.footer
-  .container Footer
+  .container
+    .footer__inner
+      a.footer__logo(href="./index.html"): +svg('logo')
+      nav.footer__nav
+        ul
+          each link in ['Экскурсии', 'Отзывы', 'Блог', 'Вопросы и ответы', 'Контакты']
+            li: a.t-ttu(href="#")= link
+      
+      .footer__info
+        +btn('Купить билет').btn--pulse.btn--dark
+        .footer__contact
+          a(href="tel:+278125653541") +7 (812) 565-35-41
+          button Заказать звонок
+          a(href="mailto:peshehodtour@yandex.ru") peshehodtour@yandex.ru
+
+    .footer__bottom
+      .footer__copyright
+        p
+         | ©2020 Пешеход Тур.
+         span  Все права защищены
+        a(href="#") Соглашение
+        a(href="#") Credits
+      .footer__social
+        +social
+
+
+
+      
+
