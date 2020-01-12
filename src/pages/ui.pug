@@ -1,5 +1,11 @@
 extends ../templates/template.pug
 block content
+  style.
+    .black-box {
+      padding: 40px;
+      background-color: #000;
+    };
+
   .container.u-center.u-flex-col
       h1 Header 1
       h2 Header 2
@@ -25,6 +31,12 @@ block content
       +btn('Купить билет').btn--pulse
       +btn('Купить билет').btn--pulse.btn--dark
       +btn('Выбрать тур', true)
+      a(href="#").btn-outline Категория
+      +arrow-btn
+
+      br
+      +pagen
+      +pagen.pagen--outline
 
       br
       +social
@@ -50,3 +62,10 @@ block content
           option(selected value="val-3") Центральные каналы
 
 
+      br
+      div()
+      +chipbox('Санкт-Петербург')
+      +chipbox('Санкт-Петербург').active
+      .black-box
+        +chipbox('Санкт-Петербург').chipbox--white
+        +chipbox('Санкт-Петербург').chipbox--white.active

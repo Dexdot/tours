@@ -1,0 +1,42 @@
+.pagen
+  display: flex
+
+.pagen:not(.pagen--outline)
+  margin-left: -8px
+  li
+    margin-left: 8px
+
+  a
+    width: 48px
+    height: 48px
+
+    transition: $trs
+    +link($black)
+    border-bottom: 1px solid rgba($black, 0.2)
+
+    &:hover
+      color: $acc
+
+    &.active
+      +link($acc)
+      border-bottom: 1px solid $acc
+
+
+.pagen--outline
+  margin-left: -16px
+  li
+    margin-left: 16px
+
+  a
+    width: 72px
+    height: 72px
+
+    transition: $trs
+    border-radius: 50%
+    border: 1px solid $black
+
+    &:not(.active)
+      opacity: 0.4
+
+    &:hover
+      opacity: 0.8
