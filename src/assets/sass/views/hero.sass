@@ -3,7 +3,8 @@
   position: relative
   margin-top: var(--header-h)
   height: calc(100vh - var(--header-h))
-  height: calc(var(--vh, 1vh) * 100 - var(--header-h))
+  @media (max-width: $mob)
+    height: calc(var(--initial-vh, 1vh) * 100 - var(--header-h))
 
 .hero__bg
   position: absolute

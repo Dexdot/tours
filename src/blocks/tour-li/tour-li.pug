@@ -1,10 +1,10 @@
 mixin tour-li(data)
   .tour-li&attributes(attributes)
     .tour-li__img.img
-      a(href="#"): img.img__i(src=`assets/img/tours/${data.img}.jpg`)
+      a(href="./index.html"): img.img__i(src=`assets/img/tours/${data.img}.jpg`)
       +btn('Выбрать тур', true)
 
-    a(href="#").t-h6.tour-li__title= data.title
+    a(href="./index.html").t-h6.tour-li__title= data.title
     ul.tour-li__list
       li
         +svg('people')
@@ -15,6 +15,7 @@ mixin tour-li(data)
       li
         +svg('pin')
         p= data.location
+
     b.tour-li__price= `от ${data.price}₽`
   
 

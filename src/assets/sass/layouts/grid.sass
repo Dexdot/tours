@@ -30,7 +30,7 @@
   --gutter-unit: calc(var(--gutter-proportion) * var(--container-width))
   --column-and-gutter-unit: calc(var(--column-unit) + var(--gutter-unit))
 
-  --container-width: calc(100vw - #{$unit} * 2)
+  --container-width: calc(100vw - #{$unit-2})
 
 @function unit-plus($fn)
   @return calc(#{$unit} + #{$fn})

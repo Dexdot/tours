@@ -2448,6 +2448,11 @@ detect-node@^2.0.4:
   resolved "https://registry.yarnpkg.com/detect-node/-/detect-node-2.0.4.tgz#014ee8f8f669c5c58023da64b8179c083a28c46c"
   integrity sha512-ZIzRpLJrOj7jjP2miAtgqIfmzbxa4ZOr5jJc601zklsfEx9oTzmmj2nVpIPRpNlRTIh8lc1kyViIY7BWSGNmKw==
 
+dev-ip@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/dev-ip/-/dev-ip-1.0.1.tgz#a76a3ed1855be7a012bb8ac16cb80f3c00dc28f0"
+  integrity sha1-p2o+0YVb56ASu4rBbLgPPADcKPA=
+
 diffie-hellman@^5.0.0:
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/diffie-hellman/-/diffie-hellman-5.0.3.tgz#40e8ee98f55a2149607146921c63e1ae5f3d2875"
@@ -6335,6 +6340,11 @@ schema-utils@^2.0.1, schema-utils@^2.1.0, schema-utils@^2.5.0, schema-utils@^2.6
   dependencies:
     ajv "^6.10.2"
     ajv-keywords "^3.4.1"
+
+scrollbooster@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/scrollbooster/-/scrollbooster-1.1.0.tgz#7da2febe93cb9035c0d36b8bee96a4a0cc890291"
+  integrity sha512-6JHNzOYbPIJUtVcLYMtN1PVaO3FSBmTObbskM5boY78DX2hlBLOa/iqMyfChIB9m/F9NCD1xQ/jNSmeJDkry0A==
 
 scss-tokenizer@^0.2.3:
   version "0.2.3"

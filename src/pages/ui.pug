@@ -7,87 +7,77 @@ block content
     };
 
   #ui.container.u-center.u-flex-col(style="padding-top: 132px; padding-bottom: 132px;")
-      h1 Header 1
-      h2 Header 2
-      h3 Header 3
-      h4 Header 4
-      h5 Header 5
-      br
-      
-      h1.t-h1 Header 1
-      h2.t-h2 Header 2
-      h3.t-h3 Header 3
-      h4.t-h4 Header 4
-      h5.t-h5 Header 5
-      br
+    h1 Header 1
+    h2 Header 2
+    h3 Header 3
+    h4 Header 4
+    h5 Header 5
+    br
+    
+    h1.t-h1 Header 1
+    h2.t-h2 Header 2
+    h3.t-h3 Header 3
+    h4.t-h4 Header 4
+    h5.t-h5 Header 5
+    br
 
-      a(href="") Ссылка
-      button.t-ttu Uppercase
+    a(href="") Ссылка
+    button.t-ttu Uppercase
 
-      br
+    br
 
-      +btn('@peshehod.spb').btn--light
-      +btn('Купить билет')
-      +btn('Купить билет').btn--pulse
-      +btn('Купить билет').btn--pulse.btn--dark
-      +btn('Выбрать тур', true)
-      a(href="#").btn-outline Категория
-      +arrow-btn
+    +btn('@peshehod.spb').btn--light
+    +btn('Купить билет')
+    +btn('Купить билет').btn--pulse
+    +btn('Купить билет').btn--pulse.btn--dark
+    +btn('Выбрать тур', true)
+    a(href="#").btn-outline Категория
+    +arrow-btn
 
-      br
-      +pagen
-      +pagen.pagen--outline
+    br
+    +pagen
+    +pagen.pagen--outline
 
-      br
-      +social
-      
-      br
-      div(style="width: 375px;")
-        +slider-nav
+    br
+    +social
+    
+    br
+    div(style="width: 375px;")
+      +slider-nav
 
-      br
-      +tip
-        p На самом деле, можно и больше. Просто напишите нам на почту и мы предложим классный тур для большой компании
-        a(href="mailto:peshehodtour@yandex.ru") peshehodtour@yandex.ru 
+    br
+    +tip
+      p На самом деле, можно и больше. Просто напишите нам на почту и мы предложим классный тур для большой компании
+      a(href="mailto:peshehodtour@yandex.ru") peshehodtour@yandex.ru 
 
-      br
-      .select-box
-        +svg('chevron')
-        select
-          option(value="val-1") 5 декабря 2019 в 15:30
-          option(value="val-2") 31 декабря 2019 в 00:00
-          option(value="val-3") 5 января 2020 в 10:15
+    br
+    .select-box
+      +svg('chevron')
+      select
+        option(value="val-1") 5 декабря 2019 в 15:30
+        option(value="val-2") 31 декабря 2019 в 00:00
+        option(value="val-3") 5 января 2020 в 10:15
 
-      br
-      .select-text
-        +svg('chevron')
-        select
-          option(value="val-1") Все маршруты
-          option(value="val-2") Василеостровская
-          option(selected value="val-3") Центральные каналы
+    br
+    .select-text
+      +svg('chevron')
+      select
+        option(value="val-1") Все маршруты
+        option(value="val-2") Василеостровская
+        option(selected value="val-3") Центральные каналы
 
 
-      br
-      div()
-      +chipbox('Санкт-Петербург')
-      +chipbox('Санкт-Петербург').active
-      .black-box
-        +chipbox('Санкт-Петербург').chipbox--white
-        +chipbox('Санкт-Петербург').chipbox--white.active
+    br
+    div()
+    +chipbox('Санкт-Петербург')
+    +chipbox('Санкт-Петербург').active
+    .black-box
+      +chipbox('Санкт-Петербург').chipbox--white
+      +chipbox('Санкт-Петербург').chipbox--white.active
 
-      br
-      div(style="width: 375px;")
-        +input(type="text" placeholder="Input")
-        +input(true)(placeholder="Textarea")
+    br
+    div(style="width: 375px;")
+      +input(type="text" placeholder="Input")
+      +input(true)(placeholder="Textarea")
 
-      -
-        var tour = {
-          img: 'zinger',
-          title: 'Обзорная экскурсия по Петербургу',
-          people: '1-20 человек',
-          time: '2.5 часa',
-          location: 'Невский проспект',
-          price: 400
-        }
-
-      +tour-li(tour)(style="width: 310px;")
+    +tours-slider
