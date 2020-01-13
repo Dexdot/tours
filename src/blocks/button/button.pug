@@ -1,7 +1,9 @@
-mixin btn(text = 'Кнопка', expand = false)
-  button(class="btn" class={'btn--expand': expand})&attributes(attributes)
+mixin btn(text = 'Кнопка', options = { link: false, expand: false })
+  - var tag = options.link ? 'a' : 'button'
+
+  #{tag}(class="btn" class={'btn--expand': options.expand})&attributes(attributes)
     span.btn__bg
     span.btn__text= text
-    if expand
+    if options.expand
       +svg('plus').btn__plus
 

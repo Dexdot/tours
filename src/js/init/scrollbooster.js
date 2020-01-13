@@ -6,6 +6,9 @@ const init = el => {
 
   if (!content) return false;
 
+  // Cursor style
+  content.style.cursor = 'grab';
+
   // Set draggable false to links and images
   $.qsa('a, img', el).forEach(child => {
     child.draggable = false;

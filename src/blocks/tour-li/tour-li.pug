@@ -2,7 +2,7 @@ mixin tour-li(data)
   .tour-li&attributes(attributes)
     .tour-li__img.img
       a(href="./index.html"): img.img__i(src=`assets/img/tours/${data.img}.jpg`)
-      +btn('Выбрать тур', true)
+      +btn('Выбрать тур', { expand: true })
 
     a(href="./index.html").t-h6.tour-li__title= data.title
     ul.tour-li__list

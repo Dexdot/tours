@@ -30,7 +30,8 @@ block content
     +btn('Купить билет')
     +btn('Купить билет').btn--pulse
     +btn('Купить билет').btn--pulse.btn--dark
-    +btn('Выбрать тур', true)
+    +btn('Выбрать тур', { expand: true })
+
     a(href="#").btn-outline Категория
     +arrow-btn
 
@@ -80,4 +81,4 @@ block content
       +input(type="text" placeholder="Input")
       +input(true)(placeholder="Textarea")
 
-    +slider-tours
+  +slider-tours

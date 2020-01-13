@@ -1,0 +1,70 @@
+-
+  var tours = [
+    {
+      img: 'zinger',
+      title: 'Обзорная экскурсия по Петербургу',
+      people: '4-20 человек',
+      time: '2.5 часа',
+      location: 'Невский проспект',
+      price: 250
+    },
+    {
+      img: 'tower',
+      title: 'Обзорная экскурсия «От мифов к истории»',
+      people: '1-20 человек',
+      time: '2.5 часа',
+      location: 'Невский проспект',
+      price: 400
+    },
+    {
+      img: 'vo-church',
+      title: 'Экскурсия по Васильевскому острову',
+      people: '1-20 человек',
+      time: '2 часа',
+      location: 'Памятник Василию Корчмину',
+      price: 400
+    },
+    {
+      img: 'golden-cat',
+      title: 'Детская обзорная экскурсия по Петербургу',
+      people: '1-20 человек',
+      time: '1.5 часа',
+      location: 'Александровская колонна',
+      price: 1200
+    },
+    {
+      img: 'pp-church',
+      title: 'Индивидуальный тур по Петропавловской крепости',
+      people: '1-2 человека',
+      time: '2.5 часа',
+      location: 'Горьковская, Адмиралтейская',
+      price: 5000
+    },
+    {
+      img: 'hotel',
+      title: 'Индивидуальная обзорная экскурсия',
+      people: '1-2 человека',
+      time: '3 часа',
+      location: 'По договору',
+      price: 1200
+    }
+  ];
+
+mixin popular-tours
+  section.popular-tours
+    .popular-tours__container
+      .popular-tours__info
+        h2.t-h3 Популярные экскурсии
+        p Расскажем про все районы города, справимся с детской группой, устроим индивидуальную прогулку. А еще каждая  следующая экскурсия будет стоить на 100 ₽ дешевле.
+        +btn('Смотреть все', { link: true })(href="#")
+
+      .popular-tours__slider
+        .js-sb
+          ul.popular-tours__list
+            each tour in tours
+              li
+                +tour-li(tour)
+
+      .popular-tours__btn-mob
+        +btn('Смотреть все', { link: true })(href="#")
+
