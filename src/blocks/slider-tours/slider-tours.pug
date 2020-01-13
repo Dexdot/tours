@@ -50,12 +50,12 @@
     }
   ];
 
-mixin tours-slider(title = 'Другие экскурсии, которые вам понравятся')
-  section.tours-slider
+mixin slider-tours(title = 'Другие экскурсии, которые вам понравятся')
+  section.slider-tours
     .container
-      h2.t-h4.tours-slider__title= title
+      h2.t-h4.slider-tours__title= title
       .js-sb
-        ul.tours-slider__list
+        ul.slider-tours__list
           each tour in tours
             li
               +tour-li(tour)
