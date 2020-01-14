@@ -1,0 +1,23 @@
+.rail
+  font-size: 0
+  transform: translate3d(0, 0, 0)
+
+  display: inline-flex
+  white-space: nowrap
+  position: relative
+
+.rail__container
+  will-change: transform
+  transform: translateX(0)
+  position: relative
+
+  display: inline-flex
+  white-space: nowrap
+
+.rail__track
+  font-size: 0
+  display: inline-flex
+
+.rail__track > li
+  display: inline-block
+  +base-text
