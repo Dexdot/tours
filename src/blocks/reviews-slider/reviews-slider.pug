@@ -1,0 +1,37 @@
+-
+  var reviews = [
+    {
+      stars: 5,
+      text: 'Отличный формат экскурсии – прогулки для тех, кто не любит классические варианты, когда для огромной группы гид даёт много информации, изобилующей цифрами. Анастасия умело создаёт впечатление, запоминаются детали. Очень приятная прогулка с посещением красивых улочек, двориков. Понравилось и детям, и пенсионерам. Ждём новых тематических экскурсий!',
+      name: 'Кристина Мединская'
+    },
+    {
+      stars: 3,
+      text: 'Очень приятная прогулка с посещением красивых улочек, двориков. Понравилось и детям, и пенсионерам. Ждём новых тематических экскурсий!',
+      name: 'Олег Узиверт'
+    }
+  ];
+
+
+mixin reviews-slider
+  section.reviews-slider-section
+    .container
+      ul.reviews-slider.js-reviews-slider
+        each review in reviews
+          li.reviews-slide
+            .reviews-slide__icon
+              +svg('airbnb')
+            ul.reviews-slide__stars.u-center
+              - for (var x = 0; x < review.stars; x++)
+                li.reviews-slide__star: +svg('star')
+            p.reviews-slide__text= review.text
+            b.reviews-slide__name= review.name
+
+      .reviews-slider__bottom
+        +btn('Все отзывы', { link: true })
+        
+        .reviews-slider__btns
+          +arrow-btn.reviews-slider__btn.reviews-slider__btn--prev.js-reviews-slider-prev
+          +arrow-btn.reviews-slider__btn.reviews-slider__btn--next.js-reviews-slider-next
+
+

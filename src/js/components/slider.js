@@ -1,5 +1,5 @@
 export default class Slider {
-  constructor(el, loop = false) {
+  constructor(el, loop = true) {
     this.loop = loop;
 
     this.DOM = { el };
