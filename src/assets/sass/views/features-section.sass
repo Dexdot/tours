@@ -1,0 +1,79 @@
+.features-section
+  padding: 48px 0 160px
+  @media (max-width: $tab)
+    padding: 32px 0 104px
+
+.features-section__inner
+  display: flex
+  align-items: flex-start
+
+  @media (max-width: $tab)
+    flex-direction: column
+
+.feature-section__img
+  padding-top: 64px
+
+  position: relative
+
+  @media (min-width: $tab + 1)
+    min-width: column-spans(6)
+    width: column-spans(6)
+
+  @media (max-width: $tab)
+    padding-top: 32px
+    width: 89.4vw
+    margin-bottom: 72px
+
+.feature-section__cover
+  z-index: -1
+  position: absolute
+  top: 0
+  left: minus($unit)
+
+  height: calc(100% - 64px)
+  background: $beige-d
+
+  @media (min-width: $tab + 1)
+    width: column-spans(5)
+
+  @media (max-width: $tab)
+    width: 89.4vw
+    height: calc(100% - 32px)
+
+.feature-img
+  width: 100%
+  @media (max-width: $tab)
+    transform: translateX(unit-plus(6px))
+
+.feature-img img
+  display: block
+  width: 100%
+  height: auto
+
+.features-list
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+
+  margin-top: -32px
+
+  @media (min-width: $tab + 1)
+    padding-right: mix(1)
+    min-width: column-spans(5)
+    width: column-spans(5)
+    margin-left: auto
+
+  @media (min-width: 1541px)
+    padding-left: gutters(3)
+
+  @media (max-width: $tab)
+    margin-top: -64px
+    margin-left: auto
+    margin-right: auto
+
+
+.features-list > li
+  margin-top: 32px
+  @media (max-width: $tab)
+    margin-top: 64px
+    max-width: 340px

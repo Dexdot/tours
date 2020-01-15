@@ -1,0 +1,48 @@
+.feature
+  width: 100%
+  display: flex
+  @media (min-width: $tab + 1)
+    align-items: flex-start
+  @media (max-width: $tab)
+    flex-direction: column
+    align-items: center
+    text-align: center
+
+.feature__icon
+  min-width: 104px
+  width: 104px
+  height: 104px
+  
+  border-radius: 50%
+  background: $beige-d
+
+  @media (min-width: $tab + 1)
+    margin-right: 40px
+
+  @media (max-width: $tab)
+    min-width: 88px
+    width: 88px
+    height: 88px
+    margin-bottom: 24px
+
+.feature__icon img
+  width: 72px
+  height: 72px
+  object-fit: contain
+
+.features-list > li
+  &:nth-child(1) .feature__icon img
+    transform: rotate(-15deg)
+  &:nth-child(2) .feature__icon img
+    transform: rotate(5deg)
+  &:nth-child(3) .feature__icon img
+    transform: rotate(-10deg)
+
+.feature__title
+  margin-bottom: 24px
+  &, &.t-h5
+    +mont(m)
+
+.feature__info
+  @media (min-width: $tab + 1)
+    padding-top: 64px

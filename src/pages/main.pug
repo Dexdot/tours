@@ -21,3 +21,40 @@ block content
           li
             p.how-title Как работает Пешеход Тур
 
+  section.features-section
+    .container
+      .features-section__inner
+        .feature-section__img
+          .feature-section__cover
+          .feature-img: img(src="assets/img/feature-img.jpg" alt="")
+
+        -
+          var features = [
+            {
+              img: 'umbrella.svg',
+              title: 'Лучшие гиды',
+              text: 'Наши гиды – это не только интересные экскурсоводы, но и профессиональные историки, музеологи, искусствоведы, культурологи и даже дирижёры! Каждый из них покажет свой Петербург'
+            },
+            {
+              img: 'cup.png',
+              title: 'Практичные советы',
+              text: 'Мы знаем, как быстро попасть в Эрмитаж, в какой театр сходить, где вкусно и недорого поесть, как найти аутентичные  места и где вечером по-настоящему жарко. Этими тайными знаниями мы поделимся с вами! '
+            },
+            {
+              img: 'compas.png',
+              title: 'Нестандартные маршруты',
+              text: 'Мы проведем вас тайными тропами  коренных петербуржцев, покажем не только открыточные, но и малоизвестные достопримечательности и расскажем их историю. '
+            }
+          ];
+
+        ul.features-list
+          each ft in features
+            li
+              .feature
+                .feature__icon.u-center: img(src=`assets/img/features/${ft.img}` alt=ft.img)
+                .feature__info
+                  h3.t-h5.feature__title= ft.title
+                  p= ft.text
+
+
+
