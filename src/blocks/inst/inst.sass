@@ -36,6 +36,9 @@
     display: none
 
 .inst-list-container.js-sb .inst-list
+  @media (max-width: $tab)
+    will-change: transform
+    
   @media (min-width: $tab + 1)
     transform: translateX(0) !important
     cursor: initial !important

@@ -1,0 +1,136 @@
+.reviews-slider-section + .inst-section
+  padding-top: 18.5vh
+  @media (max-width: $tab)
+    padding-top: 120px
+
+  
+.catalog-section
+  overflow: hidden
+  padding-top: calc(var(--header-h) + 80px)
+  padding-bottom: 18.5vh
+
+  @media (max-width: $tab)
+    padding-top: calc(var(--header-h) + 48px)
+    padding-bottom: 120px
+
+.catalog-list
+  display: flex
+  align-items: flex-start
+
+  @media (max-width: $tab)
+    flex-wrap: wrap
+    margin-left: minus(gutters(1))
+
+  @media (max-width: $mob)
+    margin-bottom: -48px
+    margin-left: -12px
+
+.catalog-list-container.js-sb .catalog-list
+  @media (max-width: $tab)
+    transform: translateX(0) !important
+    cursor: initial !important
+
+  @media (min-width: $tab + 1)
+    will-change: transform
+
+.catalog-list > li
+  min-width: column-spans(2)
+  width: column-spans(2)
+
+  &:not(:first-child)
+    @media (min-width: $tab + 1)
+      margin-left: gutters(1)
+
+  @media (max-width: 1240px)
+    min-width: 200px
+    width: 200px
+
+  @media (max-width: $tab)
+    margin-bottom: 48px
+    margin-left: gutters(1)
+    min-width: calc(50% - #{gutters(1)})
+    width: calc(50% - #{gutters(1)})
+
+  @media (max-width: $mob)
+    margin-left: 12px
+    min-width: calc(50% - 12px)
+    width: calc(50% - 12px)
+
+.catalog-head
+  display: flex
+  align-items: flex-start
+  margin-bottom: 64px
+
+  @media (min-width: $tab + 1)
+    justify-content: space-between
+
+  @media (max-width: $tab)
+    margin-bottom: 24px
+
+.catalog-head__title
+
+.catalog-title
+  display: block
+  @media (min-width: $tab + 1)
+    margin-bottom: 24px
+
+.catalog-tabs
+  display: flex
+  align-items: center
+  margin-left: -16px
+
+  @media (max-width: $tab)
+    display: none
+
+.catalog-tabs > li
+  margin-left: 16px
+
+.catalog-tab
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    bottom: -4px
+    left: 0
+
+    width: 100%
+    height: 1px
+    background: $black
+    transition: $trs
+    transform-origin: 0% 50%
+    transform: scaleX(0)
+  
+  &:hover,
+  &.active
+    &::before
+      transform: scaleX(1)
+
+.catalog-tab.active
+  +mont(b)
+
+.catalog-head__chipbox-list
+  display: flex
+  align-items: center
+
+  @media (max-width: $tab)
+    display: none
+
+  .chipbox
+    margin-left: 4px
+
+.catalog-selects
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-bottom: 32px
+
+  @media (min-width: $tab + 1)
+    display: none
+
+.catalog-selects .select-text select
+  @media (max-width: $mob)
+    font-size: 10px
+
+.catalog-selects .select-text:last-child select
+  text-align: right
+  text-align-last: right

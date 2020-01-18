@@ -1,0 +1,39 @@
+extends ../templates/template.pug
+block content
+  section.catalog-section
+    .container
+      .catalog-head
+        .catalog-head__title
+          h1.t-h3.catalog-title Экскурсии
+          ul.catalog-tabs.t-ttu
+            li: a.catalog-tab.active(href="#") Все
+            li: a.catalog-tab(href="#") Групповые
+            li: a.catalog-tab(href="#") Индивидуальные
+
+        .catalog-head__chipbox-list
+          +chipbox('Санкт-Петербург').active
+          +chipbox('Таллин')
+
+      .catalog-selects
+        .select-text
+          +svg('chevron')
+          select
+            option(value="val-1" selected) Все маршруты
+            option(value="val-2") Василеостровская
+            option(value="val-3") Центральные каналы
+
+        .select-text
+          +svg('chevron')
+          select
+            option(value="spb" selected) Санкт-Петербург
+            option(value="tallin") Таллин
+
+      .catalog-list-container.js-sb
+        ul.catalog-list
+          each tour in tours
+            li
+              +tour-li(tour)
+
+  +reviews-slider
+  
+  +inst
