@@ -1,0 +1,122 @@
+.inst-section
+  position: relative
+  padding-top: 120px
+  padding-bottom: 120px
+
+  @media (max-width: $tab)
+    padding-top: 64px
+    padding-bottom: 48px
+
+  &::before
+    content: ''
+    z-index: -1
+    position: absolute
+    bottom: 0
+    left: 0
+
+    width: 100vw
+    height: 240px
+
+    background: $beige-d
+
+    @media (max-width: $tab)
+      height: 224px
+
+.inst-list-container
+  margin: 0 auto
+  max-width: column-spans(12)
+
+  @media (max-width: $tab)
+    max-width: calc(100% - #{$unit} * 2)
+
+.inst-list-container__btn
+  margin: 0 auto
+
+  @media (min-width: $tab + 1)
+    display: none
+
+.inst-list-container.js-sb .inst-list
+  @media (min-width: $tab + 1)
+    transform: translateX(0) !important
+    cursor: initial !important
+
+.inst-list
+  display: flex
+
+  @media (min-width: $tab + 1)
+    flex-wrap: wrap
+    margin-top: minus(gutters(1))
+    margin-left: minus(gutters(1))
+
+  @media (max-width: $tab)
+    margin-bottom: 40px
+
+.inst-li
+  @media (min-width: $tab + 1)
+    margin-top: gutters(1)
+    margin-left: gutters(1)
+
+  &:not(:first-child)
+    @media (max-width: $tab)
+      margin-left: 16px
+
+  // Info block
+  &:nth-child(2)
+    @media (max-width: $tab)
+      display: none
+
+.inst-block
+  @media (min-width: $tab + 1)
+    width: column-spans(3)
+    
+  @media (max-width: $tab)
+    width: 216px
+
+.inst-block
+  display: block
+  padding-bottom: 100%
+
+.inst-block .i-inst
+  color: #fff
+  position: absolute
+  top: 24px
+  left: 24px
+
+  width: 20px
+  height: 20px
+
+  @media (max-width: $tab)
+    top: 16px
+    left: 16px
+
+.inst-info
+  @media (min-width: $tab + 1)
+    height: 100%
+    width: column-spans(6)
+
+.inst-info__inner
+  margin: 0 auto
+
+  @media (min-width: $tab + 1)
+    height: 100%
+
+  @media (min-width: $tab + 1) and (max-width: 1300px)
+    max-width: calc(100% - 32px)
+
+  @media (min-width: 1301px)
+    max-width: 72%
+
+.inst-info__title
+  margin-bottom: 16px
+  @media (max-width: $mob)
+    margin-bottom: 24px
+
+.inst-info p
+  margin-bottom: 40px
+  @media (max-width: 1300px)
+    margin-bottom: 24px
+
+.inst-section__mob-info
+  margin-bottom: 40px
+  @media (min-width: $tab + 1)
+    display: none
