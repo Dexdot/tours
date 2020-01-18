@@ -59,13 +59,16 @@
 
   margin-top: -32px
 
+  @media (min-width: $tab + 1) and (max-width: 1540px)
+    padding-right: 40px
+
   @media (min-width: $tab + 1)
-    padding-right: mix(1)
     min-width: column-spans(5)
     width: column-spans(5)
     margin-left: auto
 
   @media (min-width: 1541px)
+    padding-right: mix(1)
     padding-left: gutters(3)
 
   @media (max-width: $tab)

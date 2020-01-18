@@ -6,3 +6,4 @@ import '~/blocks/tip/tip';
 import '~/blocks/menu/menu';
 import '~/blocks/header/header';
 import '~/blocks/reviews-slider/reviews-slider';
+import '~/blocks/accordion/accordion';

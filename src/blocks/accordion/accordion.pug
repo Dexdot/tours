@@ -1,0 +1,9 @@
+mixin accordion-item(text = '')
+  li.accordion
+    button.accordion__btn(type="button")
+      | #{text}
+      +svg('chevron')
+    .accordion__content
+      .accordion__content-inner
+        if block
+          block
