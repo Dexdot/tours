@@ -19,7 +19,7 @@ mixin reviews-slider
       ul.reviews-slider.js-reviews-slider
         each review in reviews
           li.reviews-slide
-            .reviews-slide__icon
+            .reviews-slide__icon.u-center
               +svg('airbnb')
             ul.reviews-slide__stars.u-center
               - for (var x = 0; x < review.stars; x++)

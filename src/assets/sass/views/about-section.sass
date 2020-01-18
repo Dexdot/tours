@@ -1,0 +1,137 @@
+.about-section
+  position: relative
+  z-index: 1
+
+  @media (max-width: $tab)
+    padding-bottom: 56px
+
+.about-section__first-img
+  width: unit-plus(column-spans(4))
+  margin-top: -68px
+
+  @media (max-width: $tab)
+    width: 64vw
+    margin-top: -36px
+    margin-bottom: 32px
+
+.about-section__first-img > img
+  display: block
+  width: 100%
+  height: auto
+
+.about-section__info
+  position: relative
+  display: flex
+  align-items: flex-start
+
+  width: 100%
+  margin-bottom: 8px
+
+  @media (min-width: $tab + 1)
+    padding-left: mix(2)
+
+  @media (max-width: $tab)
+    margin-bottom: 104px
+    flex-direction: column-reverse
+
+.about-section__text
+  @media (min-width: $tab + 1)
+    padding-top: 14%
+    max-width: column-spans(5)
+
+  @media (max-width: $tab)
+    padding-left: 4.266666666666667vw
+
+.about-section__text p b
+  +mont(b)
+
+.about-section__text p
+  +yo('font-size', (375px: 20px, 1920px: 36px, 2550px: 44px))
+  line-height: 1.2
+  margin-bottom: 1.3333em
+
+  @media (max-width: $tab)
+    margin-bottom: 32px
+
+.about-section__text-img
+  margin-left: auto
+
+.about-section__text-img > img
+  display: block
+
+.about-section__text-img > img:first-child
+  transform: translateX($unit)
+  width: calc(#{mix(4)} + #{gutters(1)} / 2)
+  height: auto
+  margin-bottom: 20%
+
+  @media (max-width: $tab)
+    width: 49vw
+    margin-bottom: 104px
+
+.about-section__text-img > img:last-child
+  width: calc(#{column-spans(2)} + #{gutters(1)} / 2)
+  height: calc(#{column-spans(2)} + #{gutters(1)} / 2)
+  margin-right: calc(#{columns(1)} + #{gutters(1)} / 2)
+  margin-left: auto
+  object-fit: cover
+
+  @media (max-width: $tab)
+    display: none
+
+
+.about-section__last-img
+  display: flex
+  align-items: flex-start
+
+  @media (min-width: $tab + 1)
+    flex-direction: row-reverse
+
+  @media (max-width: $tab)
+    flex-direction: column
+
+.about-section__last-img > div
+  position: relative
+
+  @media (min-width: $tab + 1)
+    margin-right: calc(#{mix(3)} + #{columns(1)} / 2)
+
+  @media (max-width: $tab)
+    margin-bottom: 23.466666666666665vw
+
+.about-section__last-img > div img:first-child
+  display: block
+  width: column-spans(3)
+  height: auto
+  @media (max-width: $tab)
+    width: 62.13333333333333vw
+
+.about-section__last-img > div img:last-child
+  position: absolute
+  bottom: 0
+  left: 100%
+  transform: translate(-28%, 50%)
+
+  display: block
+  width: 10.416666666666668vw
+  height: 10.416666666666668vw
+  object-fit: cover
+
+  @media (max-width: $tab)
+    width: 38.4vw
+    height: 38.4vw
+
+
+.about-section__last-img > img
+  display: block
+  margin-right: auto
+  height: auto
+  width: unit-plus(column-spans(2))
+
+  @media (min-width: $tab + 1)
+    transform: translate(minus($unit), -17%)
+
+  @media (max-width: $tab)
+    width: 42.666666666666664vw
+
+
