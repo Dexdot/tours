@@ -23,9 +23,21 @@
 
 
 .pagen--outline
+  +mont(sb)
+  font-size: 18px
+
   margin-left: -16px
+
+  @media (max-width: $mob)
+    flex-wrap: wrap
+    font-size: 16px
+    margin-top: -8px
+    justify-content: center
+
   li
     margin-left: 16px
+    @media (max-width: $mob)
+      margin-top: 8px
 
   a
     width: 72px
@@ -34,6 +46,10 @@
     transition: $trs
     border-radius: 50%
     border: 1px solid $black
+
+    @media (max-width: $mob)
+      width: 48px
+      height: 48px
 
     &:not(.active)
       opacity: 0.4

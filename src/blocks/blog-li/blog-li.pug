@@ -1,0 +1,8 @@
+mixin blog-li(data)
+  a.blog-li(href="#")
+    .blog-li__img.img
+      img.img__i(src=`assets/img/blog/${data.img}.jpg` alt=data.title)
+    .blog-li__content
+      p.blog-li__date.t-ttu= data.date
+      h3.blog-li__title.t-h5=data.title
+      p.blog-li__read Читать статью

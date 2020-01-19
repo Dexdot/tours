@@ -1,4 +1,4 @@
-mixin pagen(num = 4)
+mixin pagen(num = 5)
   ul.pagen&attributes(attributes)
     - for (var x = 0; x < num; x++)
       li: a.u-center(class={ active: x === 0 } href="#")= x + 1

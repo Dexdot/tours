@@ -1,0 +1,83 @@
+.blog-section
+  position: relative
+
+  overflow: hidden
+  padding-top: calc(var(--header-h) + 14vh)
+  padding-bottom: 18.5vh
+
+  @media (max-width: $tab)
+    padding-top: calc(var(--header-h) + 48px)
+    padding-bottom: 96px
+
+
+.blog-section::before
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  background: $beige-d
+
+
+.blog-container
+  position: relative
+  z-index: 1
+  
+  margin: 0 auto
+  width: column-spans(8)
+
+  @media (max-width: 1400px)
+    width: column-spans(10)
+
+  @media (max-width: $tab)
+    width: 100%
+
+.blog-head
+  margin-bottom: 112px
+  @media (max-width: 700px)
+    margin-bottom: 64px
+
+.blog-title
+  +mont(b)
+  line-height: 1.2
+  +yo('font-size', (375px: 30px, 1920px: 40px, 2550px: 56px))
+  margin-bottom: 1em
+  @media (max-width: $tab)
+    margin-bottom: 24px
+
+.blog-categories
+  margin-top: -8px
+  margin-left: -8px
+
+.blog-categories > li
+  margin-top: 8px
+  margin-left: 8px
+
+.blog-list
+  display: flex
+
+  @media (max-width: 700px)
+    flex-direction: column
+    margin-top: -24px
+    margin-bottom: 48px
+
+  @media (min-width: 701px)
+    flex-wrap: wrap
+
+    margin-bottom: 4.58vw
+    margin-top: -4.58vw
+    margin-left: -4.58vw
+
+.blog-list > li
+  @media (min-width: 701px)
+    margin-top: 4.58vw
+    margin-left: 4.58vw
+    width: calc(50% - 4.58vw)
+
+  @media (max-width: 700px)
+    width: 100%
+    margin-top: 24px
+
+.blog-pagen
+

@@ -1,0 +1,18 @@
+extends ../templates/template.pug
+
+block content
+  section.blog-section
+    .container
+      .blog-container
+        .blog-head.t-tac
+          h1.blog-title Блог
+          ul.blog-categories.u-fxw.u-center
+            each c in ['Все', 'Музеи', 'Еда', 'Театр', 'События']
+              li: a(href="#").btn-outline= c
+
+        ul.blog-list
+          each item in bloglist
+            li: +blog-li(item)
+        
+        .blog-pagen.u-center
+          +pagen.pagen--outline
