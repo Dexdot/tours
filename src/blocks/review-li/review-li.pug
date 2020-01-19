@@ -1,0 +1,23 @@
+mixin review-li(data)
+  .review-li
+    .review-li__head
+      if data.avatar === 'airbnb'
+        .review-li__avatar.u-center: +svg('airbnb')
+      else if data.avatar === 'tripadvisor'
+        .review-li__avatar.u-center: +svg('tripadvisor')
+      else 
+        .review-li__avatar.u-center.img
+          img.img__i(src=`assets/img/reviews/${data.avatar}.jpg`)
+
+      .review-li__user
+        b.review-li__name= data.name
+        .review-li__user-row
+          ul.review-li__stars
+            - for (var x = 0; x < data.stars; x++)
+              li.review-li__star: +svg('star')
+          p.review-li__date= data.date
+
+    .review-li__body
+      p= data.text
+      a.review-li__link(href="#") Перейти к отзыву
+        

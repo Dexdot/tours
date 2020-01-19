@@ -1,7 +1,11 @@
-mixin modal(name, type = 'center')
-  section.modal(class=`modal--${name} modal--${type}` data-modal=name)
+mixin modal(name, type = 'center', side = 'left')
+  section.modal(class=`modal--${name} modal--${type}${type === 'aside' ? ` modal--${side}` : ''}` data-modal=name)
     button.modal__overlay(type="button" data-modal-close=name)
     .modal__container
+      button.modal__close.u-center(type="button" data-modal-close=name)
+        +svg('close')
       .modal__content
+        button.modal__close.u-center(type="button" data-modal-close=name)
+          +svg('chevron')
         if block
           block

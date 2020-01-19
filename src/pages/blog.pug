@@ -1,6 +1,49 @@
 extends ../templates/template.pug
-
 block content
+  -
+    var bloglist = [
+      {
+        img: 1,
+        date: `${randomMinMax(1, 30)} декабря`,
+        title: 'Зима в Петербурге: 10 причин выйти из теплой комнаты и повеселиться'
+      },
+      {
+        img: 2,
+        date: `${randomMinMax(1, 30)} декабря`,
+        title: 'За что петербуржцы любят Петра Первого?'
+      },
+      {
+        img: 3,
+        date: `${randomMinMax(1, 30)} ноября`,
+        title: 'Русская кухня в Петербурге: куда пойти туристу'
+      },
+      {
+        img: 4,
+        date: `${randomMinMax(1, 30)} ноября`,
+        title: 'Как переименовали Петербург'
+      },
+      {
+        img: 5,
+        date: `${randomMinMax(1, 30)} октября`,
+        title: 'Современный интерьер в двушке под сдачу на «Дмитровской»'
+      },
+      {
+        img: 6,
+        date: `${randomMinMax(1, 30)} сентября`,
+        title: 'Одеваться как петербуржец. Что нужно знать о северной зиме и весне'
+      },
+      {
+        img: 7,
+        date: `${randomMinMax(1, 30)} сентября`,
+        title: 'Петербург Возрождения: 12 мест из прошлого'
+      },
+      {
+        img: 8,
+        date: `${randomMinMax(1, 30)} августа`,
+        title: 'Главные открытия и гастрономические новости недели'
+      }
+    ];
+
   section.blog-section
     .container
       .blog-container

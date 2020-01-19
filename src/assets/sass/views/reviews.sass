@@ -1,0 +1,101 @@
+.reviews-section
+  padding-top: calc(var(--header-h) + 13vh)
+  padding-bottom: 80px
+
+  @media (max-width: $tab)
+    padding-top: calc(var(--header-h) + 48px)
+    padding-bottom: 24px
+
+.reviews-container
+  display: flex
+  align-items: flex-start
+
+  @media (max-width: $tab)
+    flex-direction: column
+
+.reviews-content
+  @media (min-width: $tab + 1)
+    min-width: column-spans(5)
+    width: column-spans(5)
+
+.reviews-left
+  @media (min-width: $tab + 1)
+    min-width: mix(3)
+    width: mix(3)
+    top: calc(var(--header-h) + 16px)
+
+  @media (max-width: $tab)
+    width: 100%
+    margin-bottom: 48px
+
+.reviews-right
+  background: $beige-d
+  transform: translate($unit, minus(var(--header-h)))
+  top: calc(var(--header-h) + 16px)
+
+  padding: var(--header-h) $unit 0 unit-plus(8px)
+  margin-left: auto
+  min-width: unit-plus(column-spans(3))
+  width: unit-plus(column-spans(3))
+  height: 100vh
+
+  @media (max-width: $tab)
+    display: none
+  
+.reviews-left,
+.reviews-right
+  @media (min-width: $tab + 1)
+    position: sticky
+    float: left
+
+.reviews-title
+  +mont(b)
+  line-height: 1.2
+  +yo('font-size', (375px: 30px, 1920px: 40px, 2550px: 56px))
+
+  margin-bottom: 1em
+  @media (max-width: $tab)
+    margin-bottom: 24px
+
+.reviews-controls .select-text select
+  +mont(m)
+
+.reviews-controls
+  display: inline-block
+  @media (max-width: $tab)
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.reviews-link
+  font-size: 12px
+  +mont(sb)
+  +link($acc)
+
+  display: flex
+  align-items: center
+
+  @media (min-width: $tab + 1)
+    display: none
+
+  .i-chevron
+    margin-left: 4px
+    width: 8px
+    height: 8px
+    color: $acc
+
+.reviews-list
+  width: 100%
+  margin-bottom: 64px
+
+  @media (max-width: $tab)
+    margin-bottom: 40px
+
+.reviews-list > li:not(:last-child)
+  padding-bottom: 40px
+  margin-bottom: 32px
+  border-bottom: 1px solid rgba($black, 0.1)
+  @media (max-width: $tab)
+    padding-bottom: 32px
+    margin-bottom: 24px
+

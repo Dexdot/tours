@@ -1,0 +1,85 @@
+.review-li
+  display: block
+
+.review-li__head
+  display: flex
+  align-items: center
+  margin-bottom: 16px
+
+.review-li__body
+  +mont(r)
+  font-size: 16px
+  letter-spacing: -0.02em
+
+  p
+    margin-bottom: 8px
+    @media (max-width: $tab)
+      margin-bottom: 16px
+
+.review-li__avatar
+  margin-right: 16px
+  min-width: 64px
+  width: 64px
+  height: 64px
+
+  border-radius: 50%
+  background: $beige-d
+
+  img
+    border-radius: 50%
+  
+  svg
+    width: 26px
+    height: 26px
+
+.review-li__name
+  font-size: 18px
+  +mont(sb)
+
+  display: block
+  margin-bottom: 4px
+
+.review-li__user-row
+  display: flex
+  align-items: center
+
+.review-li__stars
+  display: flex
+  align-items: center
+
+.review-li__star
+  min-width: 18px
+  width: 18px
+  height: 18px
+
+  .i-star
+    color: $acc
+    width: 18px
+    height: 18px
+
+.review-li__date
+  +mont(r)
+  font-size: 14px
+  letter-spacing: -0.02em
+
+  &::before
+    content: ''
+
+    width: 3px
+    height: 3px
+    margin: 0 8px
+
+    display: inline-block
+    vertical-align: middle
+
+    border-radius: 50%
+    background: $black
+  
+.review-li__link
+  display: block
+  +mont(sb)
+  font-size: 16px
+  letter-spacing: -0.02em
+  +link($acc)
+
+
