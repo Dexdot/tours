@@ -1,0 +1,56 @@
+.faq-page
+  padding-top: calc(var(--header-h) + 13vh)
+  padding-bottom: 14.8vh
+  @media (max-width: $tab)
+    padding-top: calc(var(--header-h) + 48px)
+    padding-bottom: 80px
+
+.faq-page__title
+  @media (min-width: $tab + 1)
+    max-width: 5em
+    padding-top: 0.4em
+
+    z-index: 2
+    position: sticky
+    top: calc(var(--header-h) + 16px)
+    float: left
+
+  @media (max-width: $tab)
+    margin-bottom: 40px
+  
+
+.faq-page__content
+  margin: 0 auto
+  @media (min-width: $tab + 1)
+    max-width: column-spans(6)
+
+.faq-page__content .accordion-container
+  @media (min-width: $tab + 1)
+    margin-bottom: 40px
+
+.faq-page__content .accordion::before
+  @media (min-width: $tab + 1)
+    left: minus(unit-plus(mix(3)))
+
+  @media (max-width: $tab)
+    left: minus($unit)
+
+.faq-page__text
+  @media (max-width: $tab)
+    display: none
+
+.faq-page__text b,
+.faq-page__text a
+  +mont(sb)
+  letter-spacing: -0.02em
+
+.faq-page__text b
+  display: block
+  font-size: 18px
+  @media (max-width: $tab)
+    font-size: 14px
+
+.faq-page__text a
+  white-space: nowrap
+  +link($acc)
+
