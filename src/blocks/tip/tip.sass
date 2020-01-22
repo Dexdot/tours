@@ -8,7 +8,7 @@
     position: static
 
 // Button
-.tip__btn
+.tip-btn
   min-width: 16px
   width: 16px
   height: 16px
@@ -19,9 +19,9 @@
   .i-help
     color: #fff
 
-.tip__btn:focus,
-.tip__btn:hover
-  & + .tip__content
+.tip-btn:focus,
+.tip-btn:hover
+  & + .tip-content
     opacity: 1
     transform: translate(16px, 0)
 
@@ -30,7 +30,7 @@
 
 
 // Content
-.tip__content
+.tip-content
   z-index: 1
   position: absolute
   top: -16px
@@ -54,17 +54,17 @@
     left: 0
 
 
-.tip__content
+.tip-content
   p, a
     &:not(:last-child)
       margin-bottom: 8px
 
-.tip__content a
+.tip-content a
   +link($acc)
 
 
 // Content triangle
-.tip__content::before
+.tip-content::before
   content: ''
   position: absolute
   top: 16px

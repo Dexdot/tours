@@ -1,2 +1,74 @@
 .tour-page
   padding-top: var(--header-h)
+
+.tour-page__container
+  display: flex
+  align-items: flex-start
+  padding-top: 64px
+
+.tour-page__left,
+.tour-page__right
+  @media (min-width: $tab + 1)
+    position: sticky
+
+.tour-page__left
+  @media (min-width: $tab + 1)
+    top: calc(8px + var(--header-h))
+    float: left
+    min-width: column-spans(4)
+    width: column-spans(4)
+
+.tour-page__title
+  margin-bottom: 32px
+
+.tour-page__info-list
+  line-height: 1.2
+
+  li
+    display: flex
+    align-items: flex-start
+
+  li:not(:last-child)
+    margin-bottom: 8px
+
+.tour-page__info-icon
+  margin-right: 12px
+  min-width: 16px
+  width: 16px
+  height: 16px
+
+.tour-page__info-list .tip
+  margin-left: 0.3em
+
+.tour-page__content
+  font-size: 16px
+
+  @media (min-width: $tab + 1)
+    min-width: column-spans(4)
+    width: column-spans(4)
+
+.tour-page__content h2
+  margin-bottom: 1.3333em
+
+.tour-page__content-inner
+  margin-bottom: 48px
+  letter-spacing: -0.02em
+
+  b
+    +mont(sb)
+
+  p:not(:last-child)
+    margin-bottom: 24px
+
+.tour-page__right
+  background: $beige-d
+  @media (min-width: $tab + 1)
+    min-width: mix(4)
+    width: mix(4)
+    margin-left: auto
+
+    float: right
+    top: calc(64px + var(--header-h))
+    transform: translateY(-64px)
+
+    height: 400px

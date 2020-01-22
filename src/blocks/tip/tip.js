@@ -14,7 +14,7 @@ const initTip = () => {
     );
   };
 
-  $.each('.tip__btn', it => {
+  $.each('.tip-btn', it => {
     handler(null, it);
     it.addEventListener('mouseenter', handler);
   });
