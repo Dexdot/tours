@@ -1,13 +1,23 @@
-.roadmap
-
 .roadmap__title
   display: flex
   align-items: center
   line-height: 1.2
   margin-bottom: 16px
 
+.roadmap__title--desktop
+  @media (max-width: $tab)
+    display: none
+
+.roadmap__title--mob
+  @media (min-width: $tab + 1)
+    display: none
+
 .roadmap__title .tip-btn
+  pointer-events: none
   margin-right: 32px
+
+  @media (max-width: $tab)
+    margin-right: 24px
 
 .roadmap__title b
   +mont(sb)
@@ -15,6 +25,9 @@
 .roadmap__list > li
   position: relative
   padding-left: 48px
+
+  @media (max-width: $tab)
+    padding-left: 40px
 
 .roadmap__list > li:not(:last-child)
   margin-bottom: 16px
@@ -42,3 +55,68 @@
   height: calc(100% + 8px)
   background: $black
 
+.roadmap__btn
+  position: relative
+  text-align: left
+
+  &:hover
+    .roadmap__img
+      @media (min-width: $tab + 1)
+        opacity: 1
+        transform: translateX(0)
+        transition: 0.3s $cubic-io 0.1s
+
+    .roadmap__btn-icon
+      transform: scale(1)
+
+.roadmap__btn-icon
+  z-index: 1
+  position: absolute
+  top: calc(.4em - 7px)
+  right: calc(100% + 29px)
+
+  transform: scale(0)
+  transform-origin: center center
+  transition: 0.3s $cubic-io
+
+  display: block
+  width: 23px
+  height: 23px
+
+  border: 1px solid $black
+  background: $beige-l
+  border-radius: 50%
+
+  @media (max-width: $tab)
+    right: calc(100% + 21px)
+
+  &::before
+    content: ''
+    position: absolute
+    top: 6px
+    left: 6px
+
+    width: 9px
+    height: 9px
+    background: $black
+    border-radius: 50%
+    border: 1px solid $black
+
+.roadmap__img
+  z-index: 1
+  position: fixed
+  left: $unit
+  bottom: $unit
+
+  display: block
+  width: column-spans(3)
+  height: auto
+
+  transform: translateX(-8px)
+  opacity: 0
+  pointer-events: none
+  transition: 0.3s $cubic-io
+
+  @media (max-width: $tab)
+    display: none
+  
