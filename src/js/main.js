@@ -8,3 +8,4 @@ import '~/blocks/header/header';
 import '~/blocks/reviews-slider/reviews-slider';
 import '~/blocks/review-rates/review-rates';
 import '~/blocks/accordion/accordion';
+import '~/blocks/sights/sights';
