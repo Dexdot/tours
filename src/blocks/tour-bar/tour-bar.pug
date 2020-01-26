@@ -1,0 +1,13 @@
+mixin tour-bar
+  .tour-bar
+    .tour-bar__inner
+      .tour-bar__info
+        .tour-bar__price от 400₽
+        .tour-bar__rate
+          b 4.8
+          ul.tour-bar__stars
+            - for (var x = 0; x < 5; x++)
+              li.tour-bar__star: +svg('star')
+          p 68 отзывов
+
+      +btn('Выбрать тур')

@@ -1,0 +1,53 @@
+.tour-bar
+  z-index: 3
+  position: fixed
+  bottom: 0
+  left: 0
+
+  width: 100%
+  padding: 16px $unit 32px
+
+  background: $beige-l
+
+  @media (min-width: $mob + 1)
+    display: none
+  
+.tour-bar__inner
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  // .btn
+  //   padding: 0 16px
+
+.tour-bar__info
+
+.tour-bar__price
+  +mont(b)
+  line-height: 1
+  font-size: 16px
+  margin-bottom: 4px
+
+.tour-bar__rate
+  display: flex
+  align-items: center
+  font-size: 12px
+
+  b
+    line-height: 1
+    margin-right: 2px
+
+.tour-bar__stars
+  margin-right: 4px
+  display: flex
+  align-items: center
+
+.tour-bar__star
+  min-width: 12px
+  width: 12px
+  height: 12px
+
+  .i-star
+    color: $acc
+    width: 12px
+    height: 12px
