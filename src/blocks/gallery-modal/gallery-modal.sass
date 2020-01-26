@@ -1,0 +1,132 @@
+// Modal
+.modal--gallery-modal
+  .modal__content .modal__close
+    display: none
+
+  .modal__close
+    z-index: 1
+    position: absolute
+    right: $unit
+    top: 24px
+
+    border: 0
+    margin: 0
+
+    @media (max-width: $tab)
+      top: 16px
+
+    &,
+    & .i-close
+      width: 24px
+      height: 24px
+
+  .modal__container
+    position: relative
+
+    width: 100%
+    height: 100%
+
+    transition: $trs-4
+    background: #fff
+    opacity: 0
+
+.modal--gallery-modal.modal--active .modal__container
+  opacity: 1
+
+
+// Gallery
+.gallery-modal
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+  width: 100%
+  height: 100%
+  
+.gallery-modal__logo
+  position: absolute
+  left: $unit
+  top: 24px
+
+  @media (max-width: $tab)
+    top: 16px
+  
+
+.gallery-modal__container
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+  @media (min-width: $tab + 1)
+    width: column-spans(12)
+
+  @media (max-width: $tab)
+    width: 100%
+
+.gallery-modal__hero
+  position: relative
+
+  @media (min-width: $tab + 1)
+    width: column-spans(8)
+    margin-left: mix(1)
+
+  @media (max-width: $tab)
+    width: 100%
+
+.gallery-modal__hero-list > li:not(.active)
+  display: none
+
+.gallery-modal__hero-img
+  width: 100%
+  padding-bottom: 56.25%
+
+.gallery-modal__arrow-btn
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+
+  width: 40px
+  height: 40px
+
+  @media (max-width: $tab)
+    display: none
+
+.gallery-modal__arrow-btn .i-chevron
+  width: 20px
+  height: 20px
+
+.gallery-modal__arrow-btn--prev .i-chevron
+  transform: scale(-1, 1)
+
+.gallery-modal__arrow-btn--prev
+  right: calc(100% + 48px)
+
+.gallery-modal__arrow-btn--next
+  left: calc(100% + 48px)
+
+.gallery-modal__thumbs
+  will-change: transform
+  display: flex
+
+  @media (min-width: $tab + 1)
+    display: none
+
+.gallery-modal__thumb
+  img
+    object-fit: cover
+
+  &,
+  & img
+    width: 80px
+    height: 80px
+
+.gallery-modal__slider-nav
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+
+  @media (min-width: $tab + 1)
+    display: none

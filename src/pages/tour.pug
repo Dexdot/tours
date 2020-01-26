@@ -29,13 +29,13 @@ block content
     section.gallery-section
       .container
         .gallery-section__inner
-          button.img.gallery-section__cell.gallery-section__cell--hero
+          button.img.gallery-section__cell.gallery-section__cell--hero.js-gallery-modal-thumb(data-modal-open="gallery-modal")
             img.img__i(src=`assets/img/gallery/0.jpg`)
             +svg('arrow')
           
           .gallery-section__list
             - for (var x = 1; x < 7; x++)
-              button.img.gallery-section__cell
+              button.img.gallery-section__cell.js-gallery-modal-thumb(data-modal-open="gallery-modal")
                 img.img__i(src=`assets/img/gallery/${x}.jpg`)
                 +svg('arrow')
 

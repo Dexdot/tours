@@ -9,3 +9,4 @@ import '~/blocks/reviews-slider/reviews-slider';
 import '~/blocks/review-rates/review-rates';
 import '~/blocks/accordion/accordion';
 import '~/blocks/sights/sights';
+import '~/blocks/gallery-modal/gallery-modal';

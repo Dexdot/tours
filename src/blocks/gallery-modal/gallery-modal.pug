@@ -1,0 +1,28 @@
++modal('gallery-modal')
+  .gallery-modal
+    a.gallery-modal__logo.u-center(href="./index.html"): +svg('logo')
+
+    .gallery-modal__container
+      .gallery-modal__hero
+        ul.gallery-modal__hero-list.js-gallery-modal-slider
+          - for (var x = 0; x < 6; x++)
+            li
+              .gallery-modal__hero-img.img
+                img.img__i(src=`assets/img/gallery/${x}.jpg`)
+
+        button.gallery-modal__arrow-btn.gallery-modal__arrow-btn--prev.js-gallery-modal-prev.u-center
+          +svg('chevron')
+
+        button.gallery-modal__arrow-btn.gallery-modal__arrow-btn--next.js-gallery-modal-next.u-center
+          +svg('chevron')
+
+      .js-sb
+        ul.gallery-modal__thumbs
+          - for (var x = 0; x < 6; x++)
+            li
+              button.gallery-modal__thumb.u-center.js-gallery-modal-thumb
+                img(src=`assets/img/gallery/${x}.jpg`)
+
+    .gallery-modal__slider-nav
+      +slider-nav('js-gallery-modal-prev', 'js-gallery-modal-next')
+
