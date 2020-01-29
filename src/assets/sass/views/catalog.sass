@@ -11,7 +11,7 @@
   display: flex
   align-items: flex-start
 
-  @media (max-width: $tab)
+  @media (max-width: 1240px)
     flex-wrap: wrap
     margin-left: minus(gutters(1))
 
@@ -19,29 +19,21 @@
     margin-bottom: -48px
     margin-left: -12px
 
-.catalog-list-container.js-sb .catalog-list
-  @media (max-width: $tab)
-    transform: translateX(0) !important
-    cursor: initial !important
-
-  @media (min-width: $tab + 1)
-    will-change: transform
-
 .catalog-list > li
   min-width: column-spans(2)
   width: column-spans(2)
 
   &:not(:first-child)
-    @media (min-width: $tab + 1)
+    @media (min-width: 1241px + 1)
       margin-left: gutters(1)
 
   @media (max-width: 1240px)
-    min-width: 200px
-    width: 200px
-
-  @media (max-width: $tab)
     margin-bottom: 48px
     margin-left: gutters(1)
+    min-width: calc(33.3333% - #{gutters(1)})
+    width: calc(33.3333% - #{gutters(1)})
+
+  @media (max-width: $tab)
     min-width: calc(50% - #{gutters(1)})
     width: calc(50% - #{gutters(1)})
 
