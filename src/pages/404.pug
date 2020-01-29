@@ -1,0 +1,12 @@
+extends ../templates/template.pug
+block content
+  section.ntf
+    .container
+      .ntf__inner
+        img.ntf__img(src="assets/img/404.png" role="presentation")
+        .ntf__text
+          h1.t-h2 Ууупс!
+          p Похоже, такой страницы не существует. Выберите в меню нужный раздел или посмотрите самые популярные экскурсии ниже
+          +btn('На главную', { link: true })
+
+  +slider-tours('', false)

@@ -8,7 +8,11 @@ window.addEventListener('DOMContentLoaded', () => {
     const isMob = window.innerWidth <= 1040;
 
     header.classList[onTop ? 'remove' : 'add']('header--fixed');
-    header.classList[isMob || onTop ? 'add' : 'remove']('header--transparent');
+
+    if (isTransparent)
+      header.classList[isMob || onTop ? 'add' : 'remove'](
+        'header--transparent'
+      );
   };
   check();
 
