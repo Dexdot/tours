@@ -6,14 +6,20 @@
   .modal__close
     z-index: 1
     position: absolute
-    right: $unit
     top: 24px
 
     border: 0
     margin: 0
 
-    @media (max-width: $tab)
+    @media (min-width: $tab-sm + 1)
+      right: 120px
+
+    @media (min-width: $tab + 1)
+      right: calc(#{unit-plus(columns(1))} + 40px)
+
+    @media (max-width: $tab-sm)
       top: 16px
+      right: $unit
 
     &,
     & .i-close
@@ -49,30 +55,26 @@
   left: $unit
   top: 24px
 
-  @media (max-width: $tab)
+  @media (max-width: $tab-sm)
     top: 16px
   
 
 .gallery-modal__container
-  position: absolute
-  top: 50%
-  left: 50%
-  transform: translate(-50%, -50%)
-
-  @media (min-width: $tab + 1)
+  @media (min-width: $tab-sm + 1)
     width: column-spans(12)
 
-  @media (max-width: $tab)
+  @media (max-width: $tab-sm)
+    display: block
     width: 100%
 
 .gallery-modal__hero
   position: relative
 
-  @media (min-width: $tab + 1)
+  @media (min-width: $tab-sm + 1)
     width: column-spans(8)
     margin-left: mix(1)
 
-  @media (max-width: $tab)
+  @media (max-width: $tab-sm)
     width: 100%
 
 .gallery-modal__hero-list > li:not(.active)
@@ -81,6 +83,8 @@
 .gallery-modal__hero-img
   width: 100%
   padding-bottom: 56.25%
+  @media (max-width: $tab-sm)
+    padding-bottom: 100%
 
 .gallery-modal__arrow-btn
   position: absolute
@@ -90,7 +94,7 @@
   width: 40px
   height: 40px
 
-  @media (max-width: $tab)
+  @media (max-width: $tab-sm)
     display: none
 
 .gallery-modal__arrow-btn .i-chevron
@@ -102,16 +106,39 @@
 
 .gallery-modal__arrow-btn--prev
   right: calc(100% + 48px)
+  @media (max-width: $tab)
+    right: calc(100% + 24px)
 
 .gallery-modal__arrow-btn--next
   left: calc(100% + 48px)
+  @media (max-width: $tab)
+    left: calc(100% + 24px)
 
 .gallery-modal__thumbs
   will-change: transform
   display: flex
 
+  @media (min-width: $tab-sm + 1)
+    transform: translate(0) !important
+    position: absolute
+    top: 0
+    right: 0
+
+    flex-direction: column
+    height: 100vh
+    +scrollbar
+    width: 104px
+    padding: 16px
+
+    background: $beige-d
+
   @media (min-width: $tab + 1)
-    display: none
+    width: unit-plus(columns(1))
+    padding: 24px
+
+.gallery-modal__thumbs > li:not(:last-child)
+  @media (min-width: $tab-sm + 1)
+    margin-bottom: 16px
 
 .gallery-modal__thumb
   img
@@ -119,8 +146,21 @@
 
   &,
   & img
-    width: 80px
-    height: 80px
+    @media (min-width: $tab-sm + 1)
+      width: 72px
+      height: 72px
+
+    @media (min-width: $tab + 1)
+      width: calc(#{unit-plus(columns(1))} - 48px)
+      height: calc(#{unit-plus(columns(1))} - 48px)
+
+    @media (max-width: $tab-sm)
+      width: 80px
+      height: 80px
+
+    @media (max-width: $tab-sm) and (max-height: 700px)
+      width: 64px
+      height: 64px
 
 .gallery-modal__slider-nav
   position: absolute
@@ -128,5 +168,5 @@
   left: 0
   width: 100%
 
-  @media (min-width: $tab + 1)
+  @media (min-width: $tab-sm + 1)
     display: none

@@ -35,7 +35,7 @@
 
 .blog-head
   margin-bottom: 112px
-  @media (max-width: 700px)
+  @media (max-width: $tab-sm)
     margin-bottom: 64px
 
 .blog-title
@@ -57,12 +57,12 @@
 .blog-list
   display: flex
 
-  @media (max-width: 700px)
+  @media (max-width: $tab-sm)
     flex-direction: column
     margin-top: -24px
     margin-bottom: 48px
 
-  @media (min-width: 701px)
+  @media (min-width: $tab-sm + 1)
     flex-wrap: wrap
 
     margin-bottom: 4.58vw
@@ -70,12 +70,12 @@
     margin-left: -4.58vw
 
 .blog-list > li
-  @media (min-width: 701px)
+  @media (min-width: $tab-sm + 1)
     margin-top: 4.58vw
     margin-left: 4.58vw
     width: calc(50% - 4.58vw)
 
-  @media (max-width: 700px)
+  @media (max-width: $tab-sm)
     width: 100%
     margin-top: 24px
 
