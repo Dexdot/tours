@@ -136,6 +136,12 @@
     width: unit-plus(columns(1))
     padding: 24px
 
+.gallery-modal__thumbs > li
+  transition: $trs
+
+.gallery-modal__thumbs > li:not(.active)
+  opacity: 0.6
+
 .gallery-modal__thumbs > li:not(:last-child)
   @media (min-width: $tab-sm + 1)
     margin-bottom: 16px

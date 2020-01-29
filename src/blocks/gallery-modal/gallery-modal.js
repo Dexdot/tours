@@ -5,6 +5,23 @@ const init = el => {
 
   const slider = new Slider(el);
   const parentSection = el.closest('.gallery-modal');
+  const thumbList = $.qs('.gallery-modal__thumbs', parentSection);
+  const thumbs = Array.from(thumbList.children);
+
+  const onUpdate = activeIndex => {
+    thumbs.forEach((thumb, i) => {
+      if (i === activeIndex) {
+        thumb.classList.add('active');
+      } else {
+        thumb.classList.remove('active');
+      }
+    });
+  };
+
+  onUpdate(slider.index);
+  el.addEventListener('slider:updatecomplete', ({ detail }) => {
+    onUpdate(detail.index);
+  });
 
   // Prev
   $.delegate('.js-gallery-modal-prev', (e, btn) => {
