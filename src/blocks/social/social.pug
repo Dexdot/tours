@@ -3,7 +3,7 @@
 mixin social
   ul.social&attributes(attributes)
     each name in socials
-      li
+      li(class=`social-li--${name}`)
         a.u-center(href="#" target="_blank"): +svg(name)
     if block
       block

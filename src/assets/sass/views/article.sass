@@ -1,20 +1,242 @@
 .article-page
+  padding-top: calc(var(--header-h) + 13.3vh)
+  padding-bottom: 14.8vh
+
+  margin: 0 auto
+  display: block
+
+  @media (min-width: $tab + 1)
+    max-width: column-spans(10)
+
+  @media (max-width: 1440px)
+    padding-top: calc(var(--header-h) + 144px)
+    padding-bottom: 160px
+
+  @media (max-width: $tab)
+    padding-top: calc(var(--header-h) + 48px)
+    padding: calc(var(--header-h) + 48px) $unit 80px
+
 .article-head
+  display: flex
+  margin-bottom: 120px
+
+  @media (min-width: $tab + 1)
+    align-items: flex-end
+    justify-content: space-between
+
+  @media (max-width: $tab)
+    flex-direction: column
+    align-items: flex-start
+    margin-bottom: 24px
+
 .article-title
+  +mont(b)
+  line-height: 1.1
+  letter-spacing: -0.04em
   +yo('font-size', (375px: 30px, 1920px: 40px, 2550px: 56px))
 
-.article-hero
+  @media (min-width: $tab + 1)
+    max-width: mix(7)
+
+  @media (max-width: $tab)
+    margin-bottom: 24px
+
+.article-hero,
 .article-img
-.article-container
+  img
+    display: block
+    width: 100%
+    height: auto
+    margin-bottom: 8px
+  
+.article-img
+  margin-top: 40px
+  margin-bottom: 16px
+
+.article-hero
+  margin-bottom: 48px
+
+  @media (max-width: $tab)
+    margin-bottom: 40px
+
+.article-hero img
+  @media (max-width: $tab)
+    height: 59vh
+    object-fit: cover
+
+.article-img-author
+  font-size: 12px
+  letter-spacing: -0.02em
+  opacity: 0.3
+
 .article-aside
+  @media (max-width: $tab)
+    display: flex
+    align-items: flex-start
+    flex-wrap: wrap
+    margin-bottom: 48px
+
+  @media (min-width: $tab + 1)
+    float: left
+
 .article-author
+  line-height: 1
+  letter-spacing: -0.02em
+
+.article-author b
+  display: block
+  margin-bottom: 4px
+
 .article-date
+  +mont(b)
+  opacity: 0.3
+
+  @media (max-width: $tab)
+    margin-left: auto
+
+  @media (min-width: $tab + 1)
+    display: block
+    margin: 40px 0
+
 .article-social
+  @media (max-width: $tab)
+    width: 100%
+    margin-top: 24px
+
+  .social
+    @media (min-width: $tab + 1)
+      flex-direction: column
+      align-items: flex-start
+
+  .social-li--tripadvisor,
+  .social-li--telegram,
+  .social-li--inst
+    display: none
+  
+  .social a
+    width: 40px
+    height: 40px
 
 .article-content
+  margin: 0 auto
+  display: block
 
+  @media (min-width: $tab + 1)
+    max-width: column-spans(5)
 
-.article-img
-.article-img-author
+.article-content
+  +mont(m)
+  font-size: 16px
+  line-height: 1.6
+  letter-spacing: -0.02em
+
+  p
+    margin-bottom: 24px
+
+  > p:first-of-type
+    margin-bottom: 64px
+
+  > p:first-of-type::first-letter
+    font-size: 88px
+    line-height: 0.7
+    letter-spacing: -0.04em
+    text-transform: uppercase
+
+    float: left
+    padding-top: 0.1em
+    padding-right: 0.16em
+
+  h1, h2, h3, h4, h5, h6
+    margin-top: 48px
+    margin-bottom: 16px
+
+    +mont(b)
+    line-height: 1.1
+    letter-spacing: -0.04em
+
+  ol, ul
+    margin-bottom: 24px
+
+  ol
+    counter-reset: counter
+    margin-bottom: 24px
+    padding-left: 40px
+
+  ol li
+    position: relative
+    &:not(:last-child)
+      margin-bottom: 16px
+
+  ol li::before
+    content: counter(counter)'.'
+    counter-increment: counter
+    display: inline-block
+
+    position: absolute
+    top: 0
+    left: -40px
+
+    +mont(b)
+    font-size: 16px
+    letter-spacing: -0.02em
+
+  ol p
+    display: inline
+
+  ul li
+    position: relative
+    padding-left: 30px
+    &:not(:last-child)
+      margin-bottom: 16px
+
+  ul li::before
+    content: ''
+    position: absolute
+    top: 0.5em
+    left: 0
+
+    width: 6px
+    height: 6px
+    background: $black
+    border-radius: 50%
+
 .article-recap
+  margin-top: 40px
+  padding-top: 32px
+  border-top: 1px solid #C4C4C4
 
+  .i-umbrella
+    display: block
+    width: 32px
+    height: 32px
+
+
+.article-more
+  background: $beige-d
+  padding-top: 120px
+  padding-bottom: 160px
+
+  @media (max-width: $tab)
+    padding-top: 64px
+    padding-bottom: 80px
+
+.article-more__title
+  text-align: center
+  margin-bottom: 80px
+
+  @media (max-width: $tab)
+    margin-bottom: 40px
+
+.article-more__container
+  display: block
+  margin: 0 auto
+  width: column-spans(8)
+
+  @media (max-width: 1400px)
+    width: column-spans(10)
+
+  @media (max-width: $tab)
+    width: 100%
+
+.article-more__container .blog-list
+  margin-bottom: 0
