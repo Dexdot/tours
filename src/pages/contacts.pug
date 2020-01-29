@@ -1,0 +1,29 @@
+extends ../templates/template.pug
+block content
+
+  #set-header-transparent.u-hidden
+  section.contacts
+    .contacts__bg.img
+      img.img__i(src="assets/img/contacts.jpg" role="presentation")
+    .contacts__container
+      .contacts__info
+        .contacts__info-links
+          a(href="tel:+78125653541"): b +7 (812) 565-35-41
+          a(href="mailto:peshehodtour@yandex.ru") peshehodtour@yandex.ru
+
+        .contacts__info-social
+          +social
+
+      .contacts__right
+        .contacts__visual
+          img(src="assets/img/svg/circle-waves.svg" role="presentation")
+          img(src="assets/img/svg/stamp.svg" role="presentation")
+        
+        form.contacts__form
+          +input(false)(required type="text" placeholder="Имя")
+          +input(false)(required type="text" placeholder="Email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+")
+          +input(true)(class="js-autosize" maxlength="200" placeholder="Привет, Пешеходтур!")
+          +btn('Записаться')(type="submit")
+
+  
+  +inst

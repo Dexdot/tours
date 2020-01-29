@@ -1,13 +1,16 @@
 window.addEventListener('DOMContentLoaded', () => {
+  const header = $.qs('.header');
+  const isTransparent = $.qs('#set-header-transparent');
+
+  // Fixed on scroll
   const check = () => {
-    $.qs('.header').classList[window.pageYOffset > 1 ? 'add' : 'remove'](
-      'header--fixed'
-    );
+    const onTop = window.pageYOffset <= 1;
+    const isMob = window.innerWidth <= 1040;
+
+    header.classList[onTop ? 'remove' : 'add']('header--fixed');
+    header.classList[isMob || onTop ? 'add' : 'remove']('header--transparent');
   };
   check();
-  window.addEventListener('scroll', () => {
-    $.qs('.header').classList[window.pageYOffset > 1 ? 'add' : 'remove'](
-      'header--fixed'
-    );
-  });
+
+  window.addEventListener('scroll', check);
 });

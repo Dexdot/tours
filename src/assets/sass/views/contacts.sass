@@ -1,0 +1,144 @@
+.contacts
+  position: relative
+  display: flex
+  flex-direction: column
+
+  @media (min-width: $tab + 1)
+    min-height: 100vh
+
+.contacts__bg
+  @media (min-width: $tab + 1)
+    position: absolute
+    height: 100%
+
+  @media (max-width: $tab)
+    padding-bottom: 280px
+    
+  @media (max-width: $mob)
+    padding-bottom: 73.6%
+
+.contacts__bg::before
+  content: ''
+  z-index: 1
+  position: absolute
+  top: 0
+  left: 0
+
+  width: 100%
+  height: 100%
+  background: rgba($black, 0.3)
+
+.contacts__container
+  z-index: 1
+  position: relative
+
+  display: flex
+  height: calc(100vh - var(--header-h) - 10.6vh)
+
+  background: $beige-d
+
+  @media (min-width: $tab + 1)
+    margin-top: auto
+    margin-left: auto
+    width: unit-plus(column-spans(9))
+    padding: $unit
+
+  @media (min-width: $tab + 1) and (max-height: 960px)
+    height: calc(100vh - var(--header-h) - 40px)
+
+  @media (min-width: $tab + 1) and (max-width: 1500px) and (max-height: 960px)
+    height: calc(100vh - var(--header-h))
+
+  @media (max-width: $tab)
+    flex-direction: column
+    height: auto
+    padding: 48px $unit 80px
+
+.contacts__info
+  display: flex
+  flex-direction: column
+
+  @media (min-width: $tab + 1)
+    width: 50%
+
+  @media (max-width: $tab)
+    margin-bottom: 32px
+
+.contacts__info-links
+  line-height: 1
+  @media (max-width: $tab)
+    margin-bottom: 24px
+
+.contacts__info-links a:first-child
+  margin-bottom: 8px
+
+.contacts__info-links a:last-child
+  @media (max-width: $tab)
+    font-size: 16px
+
+.contacts__info-links a
+  display: block
+  font-size: 30px
+
+  @media (max-height: 1440px)
+    font-size: 24px
+
+.contacts__info-social
+  @media (min-width: $tab + 1)
+    margin-top: auto
+
+.contacts__right
+  display: flex
+  flex-direction: column
+
+  @media (min-width: $tab + 1)
+    width: 50%
+    padding-left: $unit
+    border-left: 1px solid rgba($black, 0.1)
+
+.contacts__visual
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+
+  @media (max-width: $tab)
+    margin-bottom: 16px
+    padding-top: 32px
+    border-top: 1px solid rgba($black, 0.1)
+
+.contacts__visual img:first-child
+  @media (min-width: $tab + 1) and(max-height: 960px)
+    width: 120px
+
+  @media (max-width: $tab)
+    width: 108px
+    margin-top: 16px
+
+.contacts__visual img:last-child
+  @media (min-width: $tab + 1) and (max-height: 960px)
+    width: 104px
+
+  @media (min-width: $tab + 1) and (max-width: 1500px) and (max-height: 960px)
+    width: 64px
+
+  @media (max-width: $tab)
+    width: 101px
+
+.contacts__form
+  margin-top: auto
+
+.contacts__form .input:not(:first-child)
+  margin-top: 40px
+  @media (max-width: $tab)
+    margin-top: 32px
+
+.contacts__form .btn
+  margin-top: 40px
+  width: 100%
+
+  .btn__bg
+    border-radius: 0
+
+  @media (max-width: $tab)
+    margin-top: 32px
+

@@ -18,9 +18,25 @@
     position: fixed
     background: $beige-l
 
-.header--fixed
+.header--fixed:not(.header--transparent)
   @media (min-width: $tab + 1)
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16)
+
+.header--transparent
+  background: 0
+  color: #fff
+  
+  a, svg
+    +link(#fff)
+
+  .social a
+    border-color: #fff
+
+  .burger-icon-top,
+  .burger-icon-bottom,
+  .burger-icon-last
+    &::before, &::after
+      background: #fff
 
 .menu-active .header
   box-shadow: unset

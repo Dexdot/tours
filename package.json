@@ -14,6 +14,7 @@
   "author": "https://gitlab.corp.code-pilots.ru/its",
   "license": "MIT",
   "dependencies": {
+    "autosize": "^4.0.2",
     "scrollbooster": "1.1.0"
   },
   "devDependencies": {
