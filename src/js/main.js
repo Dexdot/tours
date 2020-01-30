@@ -1,4 +1,5 @@
 import '~/js/init/css-props';
+import '~/blocks/preloader/preloader';
 import '~/js/init/modal';
 import '~/js/init/scrollbooster';
 import '~/js/init/rail';
