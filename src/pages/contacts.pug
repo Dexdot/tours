@@ -19,11 +19,11 @@ block content
           img(src="assets/img/svg/circle-waves.svg" role="presentation")
           img(src="assets/img/svg/stamp.svg" role="presentation")
         
-        form.contacts__form
+        form.contacts__form(novalidate)
           +input(false)(required type="text" placeholder="Имя")
           +input(false)(required type="text" placeholder="Email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+")
           +input(true)(class="js-autosize" maxlength="200" placeholder="Привет, Пешеходтур!")
-          +btn('Записаться')(type="submit")
+          +btn('Отправить')(type="submit")
 
   
   +inst

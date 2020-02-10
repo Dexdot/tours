@@ -1,5 +1,7 @@
+$reviews-pt: calc(var(--header-h) + 13vh)
+  
 .reviews-section
-  padding-top: calc(var(--header-h) + 13vh)
+  padding-top: $reviews-pt
   padding-bottom: 80px
 
   @media (max-width: $tab)
@@ -30,10 +32,10 @@
 
 .reviews-right
   background: $beige-d
-  transform: translate($unit, minus(var(--header-h)))
-  top: calc(var(--header-h) + 16px)
+  transform: translate($unit, minus($reviews-pt))
+  top: $reviews-pt
 
-  padding: var(--header-h) $unit 0 unit-plus(8px)
+  padding: $reviews-pt $unit 0 unit-plus(8px)
   margin-left: auto
   min-width: unit-plus(column-spans(3))
   width: unit-plus(column-spans(3))

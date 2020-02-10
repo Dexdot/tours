@@ -83,8 +83,12 @@
 .gallery-modal__hero-img
   width: 100%
   padding-bottom: 56.25%
-  @media (max-width: $tab-sm)
+
+  @media (max-width: $tab-sm) and (min-height: 710px)
     padding-bottom: 100%
+
+  @media (max-width: $tab-sm) and (max-height: 709px)
+    padding-bottom: 66%
 
 .gallery-modal__arrow-btn
   position: absolute

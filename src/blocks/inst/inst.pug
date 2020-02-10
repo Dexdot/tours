@@ -14,12 +14,12 @@ mixin inst
                 .inst-info__inner.u-center.u-flex-col
                   h2.t-h3.inst-info__title Выбери свое приключение
                   p Расскажем про все районы города, справимся с детской группой, устроим индивидуальную прогулку
-                  +btn('@peshehod.spb', { link: true })(class="btn--light" href="https://www.instagram.com/peshehod.spb/" target="_blank")
+                  +btn('@peshehod.spb', { link: true })(class="btn--light btn--scale" href="https://www.instagram.com/peshehod.spb/" target="_blank")
 
             else
-              a.inst-block.img(href="https://www.instagram.com/peshehod.spb/" target="blank")
+              a.inst-block.img(href="https://www.instagram.com/peshehod.spb/" target="_blank")
                 img.img__i(src=`assets/img/inst/${ x > 1 ? x : x + 1 }.jpg`)
                 +svg('inst')
       .inst-list-container__btn.t-tac
-        +btn('@peshehod.spb', { link: true })(class="btn--light" href="https://www.instagram.com/peshehod.spb/" target="_blank")
+        +btn('@peshehod.spb', { link: true })(class="btn--light btn--scale" href="https://www.instagram.com/peshehod.spb/" target="_blank")
 

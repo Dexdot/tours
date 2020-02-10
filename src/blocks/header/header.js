@@ -1,18 +1,30 @@
 window.addEventListener('DOMContentLoaded', () => {
   const header = $.qs('.header');
-  const isTransparent = $.qs('#set-header-transparent');
+  const hasTransparentModifier = $.qs('#set-header-transparent');
+  let lastY = 0;
+  let y = window.pageYOffset;
+  let dir = 'down';
 
   // Fixed on scroll
   const check = () => {
-    const onTop = window.pageYOffset <= 1;
+    y = window.pageYOffset;
+    dir = y > lastY ? 'down' : 'up';
+    lastY = y;
+
+    const onTop = y <= 1;
     const isMob = window.innerWidth <= 1040;
 
+    // Transparent
+    if (hasTransparentModifier)
+      header.classList[onTop ? 'add' : 'remove']('header--transparent');
+
+    // Fixed
     header.classList[onTop ? 'remove' : 'add']('header--fixed');
 
-    if (isTransparent)
-      header.classList[isMob || onTop ? 'add' : 'remove'](
-        'header--transparent'
-      );
+    // Up hidden
+    header.classList[onTop ? 'remove' : dir === 'down' ? 'add' : 'remove'](
+      'header--uphidden'
+    );
   };
   check();
 

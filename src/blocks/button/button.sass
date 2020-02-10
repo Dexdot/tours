@@ -10,6 +10,12 @@ $btn-h: var(--btn-h)
 
   position: relative
 
+.btn:not(.btn--scale):not(.btn--expand)
+  .btn__bg
+    transition: opacity 0.25s ease
+  &:hover .btn__bg
+    opacity: 0.4
+
 a.btn
   display: inline-block
 
@@ -43,35 +49,34 @@ a.btn
 
 
 // Pulse
-.btn--pulse
-  --pulse-color: #{$acc}
+.btn--pulse .btn__bg
+  overflow: hidden
 
-.btn--pulse::before
+.btn--pulse .btn__bg::before
   content: ''
+  z-index: 1
   position: absolute
   top: 0
   left: 0
 
-  width: 100%
+  width: 30px
   height: 100%
 
-  border-radius: $btn-h
-  border: 1px solid var(--pulse-color)
-  animation: btn-pulse 1.6s ease-in-out infinite
+  opacity: 0.3
+  background: linear-gradient(to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.03) 1%,rgba(255,255,255,0.6) 30%,rgba(255,255,255,0.85) 50%,rgba(255,255,255,0.85) 70%,rgba(255,255,255,0.85) 71%,rgba(255,255,255,0) 100%)
+  transform: skew(-10deg,0deg)
+  animation: btn-move 3s linear infinite
 
-@keyframes btn-pulse
+@keyframes btn-move
   0%
-    box-shadow: 0 0 0 var(--pulse-color)
-  50%
-    box-shadow: 0 0 24px var(--pulse-color)
+    left: 0%
+  20%
+    left: 120%
   100%
-    box-shadow: 0 0 0 var(--pulse-color)
-
+    left: 120%
 
 // Light
 .btn--light
-  --pulse-color: #E7E2DB
-  
   .btn__text
     +link($black)
   .btn__bg
@@ -82,8 +87,6 @@ a.btn
 
 // Dark
 .btn--dark
-  --pulse-color: #333
-
   .btn__bg
     background: #333
   &::before
@@ -101,9 +104,6 @@ a.btn
   padding-right: 12px
   display: flex
   align-items: center
-
-  // .btn__plus
-  //   margin-top: -1px
 
   .btn__bg,
   .btn__text,
@@ -134,4 +134,48 @@ a.btn
     opacity: 1
     pointer-events: auto
     transition: $trs-4 0.15s
-  
+
+
+// Scale
+$btn-scale-1: cubic-bezier(.19,1,.22,1)
+$btn-scale-2: cubic-bezier(.165,.84,.44,1)
+
+.btn--scale
+  .btn__text
+    transition: color $btn-scale-1
+
+  .btn__bg
+    pointer-events: none
+    transition: transform .9s $btn-scale-1, opacity .6s $btn-scale-2
+
+  &::before
+    content: ''
+    z-index: 1
+    position: absolute
+    top: 50%
+    left: 50%
+
+    transform: translate(-50%, -50%) scale(1.2,1.44)
+    opacity: 0
+    transition: transform .4s $btn-scale-1, opacity .3s $btn-scale-1
+    pointer-events: none
+
+    width: 100%
+    height: 100%
+
+    border-radius: $btn-h
+    border: 1px solid rgba($black, 0.2)
+
+.btn--scale:hover
+  .btn__text
+    color: $black
+
+  .btn__bg
+    opacity: 0
+    transform: translate(-50%, -50%) scale(0.6)
+    transition: transform .7s $btn-scale-1, opacity .15s $btn-scale-2
+
+  &::before
+    opacity: 1
+    transform: translate(-50%, -50%) scale(1)
+    transition: transform .4s $btn-scale-1,opacity .4s $btn-scale-1

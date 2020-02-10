@@ -5,22 +5,23 @@
   
 .header
   z-index: 5
+  position: fixed
   top: 0
   left: 0
   width: 100%
 
   transition: $trs
-
-  @media (max-width: $tab)
-    position: absolute
+  background: $beige-l
 
   @media (min-width: $tab + 1)
-    position: fixed
     background: $beige-l
 
 .header--fixed:not(.header--transparent)
-  @media (min-width: $tab + 1)
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16)
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16)
+
+.header--uphidden
+  @media (max-width: $tab)
+    transform: translateY(-101%)
 
 .header--transparent
   background: 0
@@ -29,7 +30,7 @@
   a, svg
     +link(#fff)
 
-  .social a
+  .social a::before
     border-color: #fff
 
   .burger-icon-top,
@@ -102,12 +103,11 @@
     margin-left: -16px
 
 .header__nav li
-  transition: opacity $trs
-
   margin-left: 32px
   @media (max-width: 1540px)
     margin-left: 16px
 
+  transition: opacity $trs
   &:hover
     opacity: 0.4
     

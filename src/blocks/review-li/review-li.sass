@@ -76,10 +76,13 @@
     background: $black
   
 .review-li__link
-  display: block
   +mont(sb)
   font-size: 16px
   letter-spacing: -0.02em
   +link($acc)
+
+  transition: opacity $trs
+  &:hover
+    opacity: 0.4
 
 

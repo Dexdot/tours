@@ -4,7 +4,7 @@ mixin popular-tours
       .popular-tours__info
         h2.t-h3 Популярные экскурсии
         p Расскажем про все районы города, справимся с детской группой, устроим индивидуальную прогулку. А еще каждая  следующая экскурсия будет стоить на 100 ₽ дешевле.
-        +btn('Смотреть все', { link: true })(href="#")
+        +btn('Смотреть все', { link: true })(class="btn--scale" href="#")
 
       .popular-tours__slider
         .js-sb
@@ -14,5 +14,5 @@ mixin popular-tours
                 +tour-li(tour)
 
       .popular-tours__btn-mob
-        +btn('Смотреть все', { link: true })(href="#")
+        +btn('Смотреть все', { link: true })(class="btn--scale" href="#")
 

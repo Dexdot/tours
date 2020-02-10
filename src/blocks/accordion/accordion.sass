@@ -10,7 +10,7 @@ $acc-btn-p: 32px
   justify-content: flex-start
 
   border-bottom: 1px solid rgba($black, 0.1)
-  transition: 0.1s ease
+  transition: 0.2s ease-in-out
 
 // Button
 .accordion__btn
@@ -28,7 +28,7 @@ $acc-btn-p: 32px
 
   @media (max-width: $tab)
     font-size: 14px
-    padding: 22px calc(#{$acc-btn-p} + 16px) 22px 0
+    padding: 22px calc(#{$acc-btn-p} + 12px) 22px 0
 
 // Icons
 .accordion__btn
@@ -44,6 +44,9 @@ $acc-btn-p: 32px
     transform-origin: 50% 50%
     transform: translateY(-50%) rotate(90deg)
 
+    @media (max-width: $tab)
+      right: 8px
+
 // Opened
 .accordion.active
   border-bottom: 1px solid rgba($black, 0)
@@ -57,7 +60,7 @@ $acc-btn-p: 32px
 
 // Content
 .accordion__content
-  transition: max-height 0.2s ease
+  transition: max-height 0.2s ease-in-out
   overflow: hidden
   max-height: 0
 
@@ -90,7 +93,7 @@ $acc-btn-p: 32px
 
     background: #fff
     opacity: 0
-    transition: opacity 0.2s ease
+    transition: opacity 0.2s ease-in-out
 
   .accordion.active::before
     opacity: 1

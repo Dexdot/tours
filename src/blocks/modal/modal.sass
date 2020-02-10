@@ -154,6 +154,8 @@
 
 // Bottom modal
 .modal--bottom
+  visibility: hidden
+
   .modal__container
     height: 100%
 
@@ -164,7 +166,7 @@
     transform: translateY(100%)
 
     +scrollbar
-    max-height: 100%
+    max-height: calc(100% - var(--header-h))
     width: 100%
 
     transition: 0.4s ease
@@ -204,5 +206,8 @@
       height: 20px
       color: rgba(#fff, 0.4)
 
-.modal--bottom.modal--active .modal__content
-  transform: translateY(0%)
+.modal--bottom.modal--active
+  visibility: visible
+
+  .modal__content
+    transform: translateY(0%)
