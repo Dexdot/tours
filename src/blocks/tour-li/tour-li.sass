@@ -4,6 +4,7 @@
 .tour-li__img
   border-radius: 12px
 
+  -webkit-mask-image: -webkit-radial-gradient(white, black)
   overflow: hidden
   margin-bottom: 24px
   padding-bottom: 155%
@@ -18,6 +19,14 @@
     @media (max-width: $mob)
       bottom: 12px
       right: 12px
+
+.tour-li__img img
+  transition: transform 2s ease
+  transform-origin: 50% 50%
+
+.tour-li:hover .tour-li__img img
+  transform: scale(1.15)
+  
 
 .tour-li__title
   display: block

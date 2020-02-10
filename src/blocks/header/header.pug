@@ -10,7 +10,7 @@ header.header
             option(value="tallin") Таллин
       nav.header__nav
         ul
-          each link in ['Экскурсии', 'Отзывы', 'Блог', 'Вопросы и ответы', 'Контакты']
+          each link in navLinks
             li: a.t-ttu(href="#")= link
       
       .header__contact

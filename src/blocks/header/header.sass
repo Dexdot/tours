@@ -102,9 +102,15 @@
     margin-left: -16px
 
 .header__nav li
+  transition: opacity $trs
+
   margin-left: 32px
   @media (max-width: 1540px)
     margin-left: 16px
+
+  &:hover
+    opacity: 0.4
+    
 
 
 // Phone

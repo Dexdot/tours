@@ -4,7 +4,7 @@ footer.footer
       a.footer__logo(href="./index.html"): +svg('logo')
       nav.footer__nav
         ul
-          each link in ['Экскурсии', 'Отзывы', 'Блог', 'Вопросы и ответы', 'Контакты']
+          each link in navLinks
             li: a.t-ttu(href="#")= link
       
       .footer__info
